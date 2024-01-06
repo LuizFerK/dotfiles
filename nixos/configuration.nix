@@ -95,6 +95,9 @@
     vim
     git
     google-chrome
+
+    # KDE
+    libsForQt5.qtstyleplugin-kvantum
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

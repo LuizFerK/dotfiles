@@ -3,7 +3,6 @@
 {
   home.packages = with pkgs; [
     # Ui pq eu sou nerd n sei oq n sei oq la
-    vscode
     flameshot
     docker-compose
     dbeaver
@@ -30,5 +29,9 @@
     material-design-icons
     noto-fonts
     font-awesome
+    terminus_font
+    terminus-nerdfont
+    fantasque-sans-mono
+    papirus-icon-theme
   ];
 }

@@ -6,6 +6,7 @@
 
     ./modules/fish.nix
     ./modules/git.nix
+    ./modules/vscode.nix
   ];
 
   home = {
