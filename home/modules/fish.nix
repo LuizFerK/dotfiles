@@ -11,6 +11,8 @@
       gco = "git checkout branch";
       gcb = "git checkout branch -b";
       gcp = "git cherry-pick";
+      nix-switch = "sudo nixos-rebuild switch --flake .";
+      home-switch = "home-manager switch -b backup --flake .";
     };
   };
   programs.starship.enable = true;
