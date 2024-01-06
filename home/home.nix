@@ -7,6 +7,7 @@
     ./modules/fish.nix
     ./modules/git.nix
     ./modules/konsole.nix
+    ./modules/kvantum.nix
     ./modules/vscode.nix
   ];
 
