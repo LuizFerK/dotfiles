@@ -1,0 +1,18 @@
+{
+  "editor.tabSize": 2,
+  "editor.fontFamily": "FiraCode Nerd Font Mono",
+  "editor.fontLigatures": true,
+  "window.zoomLevel": 1,
+  "workbench.startupEditor": "none",
+  "symbols.hidesExplorerArrows": false,
+  "workbench.iconTheme": "symbols",
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.colorTheme": "Sweet Dracula",
+  "workbench.colorCustomizations": {
+    "[Sweet Dracula]": {
+      "statusBar.background": "#161925",
+      "activityBar.background": "#161925",
+      "activityBar.border": "#161925"
+    }
+  }
+}
