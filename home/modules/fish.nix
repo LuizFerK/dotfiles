@@ -14,8 +14,7 @@
     };
   };
   programs.starship.enable = true;
-  home.file.".config" = {
-    source = ../../configs/starship;
-    recursive = true;
+  home.file.".config/starship.toml" = {
+    source = ../../configs/starship/starship.toml;
   };
 }

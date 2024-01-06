@@ -6,6 +6,7 @@
 
     ./modules/fish.nix
     ./modules/git.nix
+    ./modules/konsole.nix
     ./modules/vscode.nix
   ];
 
