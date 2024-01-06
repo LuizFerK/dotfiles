@@ -2,19 +2,24 @@
 
 {
   imports = [
+    ./modules/packages.nix
+
+    ./modules/fish.nix
     ./modules/git.nix
   ];
 
   home = {
     username = "luiz";
     homeDirectory = "/home/luiz";
-
-    sessionVariables = {
-      # EDITOR = "emacs";
-    };
-
-    # Don't change. Read the Home Manager release notes before.
     stateVersion = "23.11";
+  };
+
+
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+      allowUnfreePredicate = _: true;
+    };
   };
 
   programs.home-manager.enable = true;

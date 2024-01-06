@@ -1,14 +1,9 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -85,13 +80,8 @@
   users.users.luiz = {
     isNormalUser = true;
     description = "Luiz";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
     shell = pkgs.fish;
-    packages = with pkgs; [
-      firefox
-      kate
-    #  thunderbird
-    ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
   };
 
   nix.settings.experimental-features = "nix-command flakes";
@@ -103,14 +93,8 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim
-    google-chrome
-    discord
     git
-    flameshot
-    # latte-dock
-    vscode
-    docker-compose
-    dbeaver
+    google-chrome
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
