@@ -4,6 +4,7 @@
   imports = [
     ./modules/packages.nix
 
+    ./modules/autostart.nix
     ./modules/fish.nix
     ./modules/git.nix
     ./modules/konsole.nix
