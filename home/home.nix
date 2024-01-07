@@ -6,6 +6,7 @@
 
     ./modules/autostart.nix
     ./modules/fish.nix
+    ./modules/forceblur.nix
     ./modules/git.nix
     ./modules/konsole.nix
     ./modules/kvantum.nix
