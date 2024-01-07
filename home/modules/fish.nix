@@ -8,8 +8,8 @@
       gs = "git status";
       gc = "git commit";
       gp = "git push";
-      gco = "git checkout branch";
-      gcb = "git checkout branch -b";
+      gco = "git checkout";
+      gcb = "git checkout -b";
       gcp = "git cherry-pick";
       nix-switch = "sudo nixos-rebuild switch --flake ~/.dotfiles";
       home-switch = "home-manager switch -b backup --flake ~/.dotfiles";
