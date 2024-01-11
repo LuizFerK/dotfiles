@@ -9,6 +9,7 @@
     extensions = [
         pkgs.vscode-extensions.bbenoist.nix
         pkgs.vscode-extensions.naumovs.color-highlight
+        pkgs.vscode-extensions.elixir-lsp.vscode-elixir-ls
       ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
           name = "vscode-todo-highlight";
@@ -39,6 +40,12 @@
           publisher = "miguelsolorio";
           version = "0.0.18";
           sha256 = "sE0A441QPwokBoLoCqtImDHmlAXd66fj8zsJR7Ci+Qs=";
+        }
+        {
+          name = "volar";
+          publisher = "vue";
+          version = "1.8.27";
+          sha256 = "6FktlAJmOD3dQNn2TV83ROw41NXZ/MgquB0RFQqwwW0=";
         }
       ];
   };

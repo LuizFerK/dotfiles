@@ -14,5 +14,13 @@
       "activityBar.background": "#161925",
       "activityBar.border": "#161925"
     }
+  },
+  "files.exclude": {
+    "_build": true,
+    ".nix-hex": true,
+    ".nix-mix": true,
+    ".tests_outputs": true,
+    ".elixir_ls": true,
+    "deps": true
   }
 }
