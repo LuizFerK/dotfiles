@@ -84,6 +84,8 @@
     extraGroups = [ "networkmanager" "wheel" "docker" ];
   };
 
+  security.sudo.wheelNeedsPassword = false;
+
   nix.settings.experimental-features = "nix-command flakes";
 
   # Allow unfree packages
