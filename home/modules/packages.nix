@@ -7,6 +7,8 @@
     docker-compose
     dbeaver
     kate
+    nomad
+    postgresql_13
     # latte-dock
 
     # IDUNOOOO

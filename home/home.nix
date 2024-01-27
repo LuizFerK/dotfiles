@@ -10,6 +10,7 @@
     ./modules/git.nix
     ./modules/konsole.nix
     ./modules/kvantum.nix
+    ./modules/ssh.nix
     ./modules/vscode.nix
   ];
 

@@ -6,10 +6,12 @@
   };
   programs.vscode = {
     enable = true;
-    extensions = [
-        pkgs.vscode-extensions.bbenoist.nix
-        pkgs.vscode-extensions.naumovs.color-highlight
-        pkgs.vscode-extensions.elixir-lsp.vscode-elixir-ls
+    extensions = with pkgs.vscode-extensions; [
+        bbenoist.nix
+        elixir-lsp.vscode-elixir-ls
+        naumovs.color-highlight
+        phoenixframework.phoenix
+        bradlc.vscode-tailwindcss
       ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
           name = "vscode-todo-highlight";
@@ -46,6 +48,12 @@
           publisher = "vue";
           version = "1.8.27";
           sha256 = "6FktlAJmOD3dQNn2TV83ROw41NXZ/MgquB0RFQqwwW0=";
+        }
+        {
+          name = "alphabetical-sorter";
+          publisher = "ue";
+          version = "2.0.1";
+          sha256 = "L9soYAaa+7FTzQ9J1EwS0LpT2YIEhCd6DRBdwZJaX7Y=";
         }
       ];
   };
