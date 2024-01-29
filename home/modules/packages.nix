@@ -9,6 +9,7 @@
     kate
     nomad
     postgresql_13
+    neofetch
     # latte-dock
 
     # IDUNOOOO
