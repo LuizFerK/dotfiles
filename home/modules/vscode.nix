@@ -12,6 +12,7 @@
         naumovs.color-highlight
         phoenixframework.phoenix
         bradlc.vscode-tailwindcss
+        ms-python.python
       ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
           name = "vscode-todo-highlight";

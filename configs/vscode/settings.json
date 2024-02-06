@@ -25,9 +25,9 @@
     "node_modules": true,
     ".husky": true,
     ".yarn": true,
-    "*/__pycache__": true,
-    "__pycache__": true,
-    "instance": true
+    "**/__pycache__": true,
+    "instance": true,
+    ".pytest_cache": true
   },
   "files.associations": {
     "*.heex": "phoenix-heex"
