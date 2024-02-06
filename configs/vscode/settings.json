@@ -24,7 +24,10 @@
     "deps": true,
     "node_modules": true,
     ".husky": true,
-    ".yarn": true
+    ".yarn": true,
+    "*/__pycache__": true,
+    "__pycache__": true,
+    "instance": true
   },
   "files.associations": {
     "*.heex": "phoenix-heex"

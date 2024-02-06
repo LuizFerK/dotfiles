@@ -10,6 +10,7 @@
     nomad
     postgresql_13
     neofetch
+    insomnia
     # latte-dock
 
     # IDUNOOOO
