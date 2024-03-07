@@ -24,9 +24,11 @@
   users.users.luiz = {
     isNormalUser = true;
     initialPassword = "1";
+    shell = pkgs.fish;
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
+  programs.fish.enable = true;
   security.sudo.wheelNeedsPassword = false;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;

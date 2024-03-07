@@ -4,6 +4,7 @@
   imports = [
     inputs.impermanence.nixosModules.home-manager.impermanence
 
+    ./modules/fish.nix
     ./modules/git.nix
     ./modules/hyprland.nix
     ./modules/kitty.nix

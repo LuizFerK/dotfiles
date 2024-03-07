@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   programs.kitty = {
     enable = true;
@@ -7,7 +9,7 @@
       package = pkgs.jetbrains-mono;
       size = 10;
     };
-    theme = "Earthsong";
+    theme = "Adapta Nokto Maia";
     settings = {
       background_opacity = "0.75";
       enable_audio_bell = false;
