@@ -20,10 +20,10 @@
     };
   };
 
-  home.file.".config/waybar" = {
-    source = config.lib.file.mkOutOfStoreSymlink ../../configs/waybar;
-    recursive = true;
-  };
+  # home.file.".config/waybar" = {
+  #   source = config.lib.file.mkOutOfStoreSymlink ../../configs/waybar;
+  #   recursive = true;
+  # };
 
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
@@ -59,7 +59,7 @@
 
     bind = [
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
-      "SUPER, Return, exec, warp-terminal"
+      "SUPER, Return, exec, kitty"
       "SUPER_SHIFT,q,killactive"
       # "SUPER, D, exec, fuzzel"
 

@@ -6,6 +6,7 @@
 
     ./modules/git.nix
     ./modules/hyprland.nix
+    ./modules/kitty.nix
     ./modules/packages.nix
     ./modules/ssh.nix
     ./modules/vscode.nix

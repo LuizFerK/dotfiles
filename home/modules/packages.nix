@@ -13,7 +13,6 @@
     waybar
     swww
     slurp
-    jq
 
     # Ui pq eu sou nerd n sei oq n sei oq la
     # flameshot
@@ -22,7 +21,6 @@
     postgresql_13
     neofetch
     insomnia
-    gtk3
     unzip
     # docker-compose
 
