@@ -2,6 +2,11 @@
 
 {
   home.packages = with pkgs; [
+    # Base
+    google-chrome
+    git
+    kitty
+
     # Ui pq eu sou nerd n sei oq n sei oq la
     flameshot
     dbeaver

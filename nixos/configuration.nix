@@ -25,11 +25,6 @@
     isNormalUser = true;
     initialPassword = "1";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      firefox
-      git
-      vim
-    ];
   };
 
   security.sudo.wheelNeedsPassword = false;
