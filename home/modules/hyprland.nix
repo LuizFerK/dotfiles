@@ -41,7 +41,7 @@
     ];
 
     monitor = [
-      "DP-1, 1920x1080, 0x0, 1"
+      ",highres,auto,1"
       # "$monitor_left, 1920x1080, -1920x0, 1"
       # "$monitor_center, highrr, 0x0, 1"
       # "$monitor_right, 1920x1080, 1920x-400, 1, transform, 3"
