@@ -20,6 +20,7 @@
     postgresql_13
     neofetch
     insomnia
+    gtk3
     # docker-compose
 
     # IDUNOOOO
