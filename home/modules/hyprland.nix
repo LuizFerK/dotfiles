@@ -139,7 +139,7 @@
 
       gaps_in = 4;
       gaps_out = 5;
-      border_size = 1;
+      border_size = 0;
 
       # "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
       # "col.inactive_border" = "rgba(595959aa)";
@@ -154,13 +154,10 @@
       blur = {
         enabled = true;
         xray = true;
-        special = false;
+        ignore_opacity = true;
         new_optimizations = "on";
-        size = 5;
+        size = 1;
         passes = 4;
-        brightness = 1;
-        noise = 0.01;
-        contrast = 1;
       };
 
       drop_shadow = "yes";
@@ -218,8 +215,6 @@
     };
 
     windowrule = [
-      # "noblur,.*"
-
       # Dialogs
       "float,title:^(Open File)(.*)$"
       "float,title:^(Select a File)(.*)$"
@@ -231,7 +226,7 @@
 
     windowrulev2 = [
       "opacity 0.95 0.95,class:^(Alacritty|Discord|Spotify)$"
-      "opacity 0.8 0.5,class:(kitty)"
+      "opacity 1 0.6,class:(kitty)"
       
       "tile,class:^(dev.warp.Warp)$"
 
