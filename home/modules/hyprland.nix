@@ -8,7 +8,7 @@
     enable = true;
     settings = {
       main = {
-        terminal = "kitty";
+        terminal = "warp-terminal";
         # prompt = ">> ";
         # layer = "overlay";
       };
@@ -59,7 +59,7 @@
 
     bind = [
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
-      "SUPER, Return, exec, kitty"
+      "SUPER, Return, exec, warp-terminal"
       "SUPER_SHIFT,q,killactive"
       # "SUPER, D, exec, fuzzel"
 
@@ -232,6 +232,8 @@
     windowrulev2 = [
       "opacity 0.95 0.95,class:^(Alacritty|Discord|Spotify)$"
       "opacity 0.8 0.5,class:(kitty)"
+      
+      "tile,class:^(dev.warp.Warp)$"
 
       "noblur,class:^(dash)$"
       "noborder,class:^(dash)$"

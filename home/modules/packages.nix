@@ -7,11 +7,13 @@
     git
     vim
     kitty
+    warp-terminal
 
     # Hyprland
     waybar
     swww
     slurp
+    jq
 
     # Ui pq eu sou nerd n sei oq n sei oq la
     # flameshot
@@ -21,6 +23,7 @@
     neofetch
     insomnia
     gtk3
+    unzip
     # docker-compose
 
     # IDUNOOOO
