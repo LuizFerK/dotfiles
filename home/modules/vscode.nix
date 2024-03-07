@@ -20,12 +20,12 @@
           version = "1.0.5";
           sha256 = "CQVtMdt/fZcNIbH/KybJixnLqCsz5iF1U0k+GfL65Ok=";
         }
-        {
-          name = "sweetdracula";
-          publisher = "proxzima";
-          version = "1.0.9";
-          sha256 = "1c1P5sovBX8vaUuyn2rM2pSWGhxjnV2B34uAN8ZLGiY=";
-        }
+        # {
+        #   name = "sweetdracula";
+        #   publisher = "proxzima";
+        #   version = "1.0.9";
+        #   sha256 = "1c1P5sovBX8vaUuyn2rM2pSWGhxjnV2B34uAN8ZLGiY=";
+        # }
         {
           name = "symbols";
           publisher = "miguelsolorio";

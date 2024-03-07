@@ -1,28 +1,37 @@
 {
   description = "awesome description woooo";
-
+     
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-23.11";
-    home-manager.url = "github:nix-community/home-manager/release-23.11";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    impermanence = {
+      url = "github:nix-community/impermanence";
+    };
+
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }: let
-    system = "x86_64-linux";
-    lib = nixpkgs.lib;
-    pkgs = nixpkgs.legacyPackages.${system};
-  in {
-    nixosConfigurations = {
-      nixos = lib.nixosSystem {
-        inherit system;
-        modules = [ ./nixos/configuration.nix ];
-      };
-    };
-    homeConfigurations = {
-      luiz = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [ ./home/home.nix ];
-      };
+  outputs = {nixpkgs, ...} @ inputs:
+  {
+    nixosConfigurations.default = nixpkgs.lib.nixosSystem {
+      specialArgs = {inherit inputs;};
+      modules = [
+        inputs.disko.nixosModules.default
+        (import ./disko/disko.nix { device = "/dev/nvme0n1"; })
+
+        ./nixos/configuration.nix
+              
+        inputs.home-manager.nixosModules.default
+        inputs.impermanence.nixosModules.impermanence
+      ];
     };
   };
 }

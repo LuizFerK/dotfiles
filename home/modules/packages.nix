@@ -4,14 +4,12 @@
   home.packages = with pkgs; [
     # Ui pq eu sou nerd n sei oq n sei oq la
     flameshot
-    docker-compose
     dbeaver
-    kate
     nomad
     postgresql_13
     neofetch
     insomnia
-    # latte-dock
+    # docker-compose
 
     # IDUNOOOO
     spotify
