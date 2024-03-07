@@ -231,6 +231,7 @@
 
     windowrulev2 = [
       "opacity 0.95 0.95,class:^(Alacritty|Discord|Spotify)$"
+      "opacity 0.8 0.5,class:(kitty)"
 
       "noblur,class:^(dash)$"
       "noborder,class:^(dash)$"
