@@ -5,6 +5,7 @@
     # Base
     google-chrome
     git
+    vim
     kitty
 
     # Ui pq eu sou nerd n sei oq n sei oq la
