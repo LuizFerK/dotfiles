@@ -4,8 +4,9 @@
   imports = [
     inputs.impermanence.nixosModules.home-manager.impermanence
 
-    ./modules/packages.nix
     ./modules/git.nix
+    ./modules/hyprland.nix
+    ./modules/packages.nix
     ./modules/ssh.nix
     ./modules/vscode.nix
   ];

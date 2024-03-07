@@ -8,8 +8,13 @@
     vim
     kitty
 
+    # Hyprland
+    waybar
+    swww
+    slurp
+
     # Ui pq eu sou nerd n sei oq n sei oq la
-    flameshot
+    # flameshot
     dbeaver
     nomad
     postgresql_13
