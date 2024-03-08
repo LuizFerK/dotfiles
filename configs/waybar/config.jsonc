@@ -235,7 +235,7 @@
     "custom/keybindhint": {
         "format": " ",
         "rotate": 0,
-        "on-click": "Hyprdots show binds",
+        "on-click": "Hyprdots show binds"
     },
 
 

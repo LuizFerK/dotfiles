@@ -49,8 +49,8 @@
     ];
 
     input = {
-      kb_layout = "us";
-      kb_variant = "intl";
+      kb_layout = "us,br";
+      kb_variant = "intl,abnt2";
     };
 
     bind = [
@@ -58,6 +58,7 @@
       "SUPER, Return, exec, kitty"
       "SUPER_SHIFT,q,killactive"
       "SUPER, D, exec, rofi -show drun"
+      "SUPER, SPACE, exec, hyprctl switchxkblayout at-translated-set-2-keyboard next"
 
       # "SUPER, M, exit, "
       # "SUPER, E, exec, dolphin"
