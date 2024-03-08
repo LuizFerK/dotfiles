@@ -43,8 +43,9 @@
     ];
 
     exec-once = [
-      "waybar"
       "swww init"
+      "waybar"
+      "discord"
       # "xwaylandvideobridge"
     ];
 
