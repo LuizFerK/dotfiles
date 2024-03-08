@@ -16,6 +16,9 @@
     };
   };
 
+  # Timezone
+  time.timeZone = "America/Sao_Paulo";
+
   # Network
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
@@ -123,9 +126,6 @@
 
   # -----------------------------------------------
   # -----------------------------------------------
-
-  # Set your time zone.
-  # time.timeZone = "Europe/Amsterdam";
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";

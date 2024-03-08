@@ -5,7 +5,7 @@
   "window.zoomLevel": 1,
   "workbench.startupEditor": "none",
   "symbols.hidesExplorerArrows": false,
-  "window.menuBarVisibility": "toggle",
+  "window.menuBarVisibility": "hidden",
   "workbench.iconTheme": "symbols",
   "workbench.productIconTheme": "fluent-icons",
   "workbench.colorTheme": "Palenight Theme",
