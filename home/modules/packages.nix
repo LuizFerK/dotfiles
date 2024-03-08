@@ -12,6 +12,8 @@
     # Hyprland
     waybar
     swww
+    grim
+    wl-clipboard
     slurp
     rofi-wayland
 
