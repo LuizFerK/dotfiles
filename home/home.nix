@@ -11,6 +11,7 @@
     ./modules/packages.nix
     ./modules/ssh.nix
     ./modules/vscode.nix
+    ./modules/waybar.nix
   ];
 
   home = {

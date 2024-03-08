@@ -20,11 +20,6 @@
     };
   };
 
-  # home.file.".config/waybar" = {
-  #   source = config.lib.file.mkOutOfStoreSymlink ../../configs/waybar;
-  #   recursive = true;
-  # };
-
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
   wayland.windowManager.hyprland.settings = {
@@ -48,6 +43,7 @@
     ];
 
     exec-once = [
+      "waybar"
       "swww init"
       # "xwaylandvideobridge"
     ];
