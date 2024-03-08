@@ -13,6 +13,7 @@
     waybar
     swww
     slurp
+    rofi-wayland
 
     # Ui pq eu sou nerd n sei oq n sei oq la
     # flameshot

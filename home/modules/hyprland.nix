@@ -57,7 +57,7 @@
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
       "SUPER, Return, exec, kitty"
       "SUPER_SHIFT,q,killactive"
-      # "SUPER, D, exec, fuzzel"
+      "SUPER, D, exec, rofi -show drun"
 
       # "SUPER, M, exit, "
       # "SUPER, E, exec, dolphin"
@@ -119,16 +119,16 @@
       "SUPER, mouse:273, resizewindow"
     ];
 
-    workspace = [
-      # Set stick workspaces to the monitors
-      "1, monitor:$monitor_left"
-      "3, monitor:$monitor_left"
+    # workspace = [
+    #   # Set stick workspaces to the monitors
+    #   "1, monitor:$monitor_left"
+    #   "3, monitor:$monitor_left"
 
-      "2, monitor:$monitor_center"
-      "4, monitor:$monitor_center"
+    #   "2, monitor:$monitor_center"
+    #   "4, monitor:$monitor_center"
 
-      "6, monitor:$monitor_right"
-    ];
+    #   "6, monitor:$monitor_right"
+    # ];
 
     general = {
       # See https://wiki.hyprland.org/Configuring/Variables/ for more

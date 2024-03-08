@@ -9,7 +9,9 @@
     ./modules/hyprland.nix
     ./modules/kitty.nix
     ./modules/packages.nix
+    ./modules/rofi.nix
     ./modules/ssh.nix
+    ./modules/swww.nix
     ./modules/vscode.nix
     ./modules/waybar.nix
   ];

@@ -9,7 +9,7 @@
       package = pkgs.jetbrains-mono;
       size = 12;
     };
-    theme = "Adapta Nokto Maia";
+    theme = "Adwaita darker";
     settings = {
       background_opacity = "0.5";
       enable_audio_bell = false;
