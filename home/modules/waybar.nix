@@ -1,8 +1,6 @@
-{ config, ... }:
-
 {
   home.file.".config/waybar" = {
-    source = config.lib.file.mkOutOfStoreSymlink ../../configs/waybar;
+    source = ../../configs/waybar;
     recursive = true;
   };
 }
