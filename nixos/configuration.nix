@@ -80,6 +80,14 @@
     pulse.enable = true;
   };
 
+  # Bluetooth
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
+
+  services.blueman.enable = true;
+
   # Hardware stuff
   hardware = {
     opengl = {
