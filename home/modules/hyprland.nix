@@ -23,8 +23,8 @@
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
   wayland.windowManager.hyprland.settings = {
-    "$monitor_left" = "DP-3";
-    "$monitor_center" = "DP-4";
+    "$monitor_left" = "HDMI-A-2";
+    "$monitor_center" = "DP-1";
     "$monitor_right" = "DP-2";
 
     env = [
@@ -36,10 +36,9 @@
     ];
 
     monitor = [
-      ",highres,auto,1"
-      # "$monitor_left, 1920x1080, -1920x0, 1"
-      # "$monitor_center, highrr, 0x0, 1"
-      # "$monitor_right, 1920x1080, 1920x-400, 1, transform, 3"
+      "$monitor_left, highres, -2560x0, 1"
+      "$monitor_center, highres, 0x0, 1"
+      "$monitor_right, highres, 2560x0, 1"
     ];
 
     exec-once = [
@@ -49,17 +48,14 @@
       # "xwaylandvideobridge"
     ];
 
-    input = {
-      kb_layout = "us,br";
-      kb_variant = "intl,abnt2";
-    };
+    input.kb_layout = "us,br";
 
     bind = [
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
       "SUPER, Return, exec, kitty"
       "SUPER_SHIFT,q,killactive"
       "SUPER, D, exec, rofi -show drun"
-      "SUPER, SPACE, exec, hyprctl switchxkblayout at-translated-set-2-keyboard next"
+      "SUPER, SPACE, exec, hyprctl switchxkblayout sonix-usb-device next"
 
       # "SUPER, M, exit, "
       # "SUPER, E, exec, dolphin"
