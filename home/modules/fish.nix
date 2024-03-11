@@ -15,7 +15,6 @@
       
       # NixOS
       nix-switch = "sudo nixos-rebuild switch --flake ~/.dotfiles";
-      home-switch = "home-manager switch -b backup --flake ~/.dotfiles";
       flake-update = "nix flake update ~/.dotfiles";
 
       # Granter

@@ -25,7 +25,7 @@
     neofetch
     insomnia
     unzip
-    # docker-compose
+    docker-compose
 
     # IDUNOOOO
     spotify
