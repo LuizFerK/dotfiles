@@ -14,7 +14,7 @@
       gcp = "git cherry-pick";
       
       # NixOS
-      nix-switch = "sudo nixos-rebuild switch --flake ~/.dotfiles";
+      nixos-switch = "sudo nixos-rebuild switch --flake ~/.dotfiles";
       flake-update = "nix flake update ~/.dotfiles";
 
       # Granter

@@ -57,21 +57,23 @@
     NIXOS_OZONE_WL = "1";
   };
 
-  services.xserver = {
-    enable = true;
-    videoDrivers = ["nvidia"];
-    xkb = {
-      layout = "us";
-      variant = "intl";
-    };
-    displayManager = {
-      autoLogin.user = "luiz";
-      gdm = {
-        enable = true;
-        wayland = true;
+  services = {
+    xserver = {
+      enable = true;
+      videoDrivers = ["nvidia"];
+      xkb = {
+        layout = "us";
+        variant = "intl";
       };
+      displayManager = {
+        gdm = {
+          enable = true;
+          wayland = true;
+        };
+      };
+      exportConfiguration = true;
     };
-    exportConfiguration = true;
+    displayManager.autoLogin.user = "luiz";
   };
 
   # Audio
@@ -107,6 +109,8 @@
       package = config.boot.kernelPackages.nvidiaPackages.beta;
     };
   };
+
+  boot.kernelPackages = pkgs.linuxPackages_6_8;
 
   # Wipe off root filesystem on reboot
   # boot.initrd.postDeviceCommands = lib.mkAfter ''

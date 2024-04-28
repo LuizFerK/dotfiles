@@ -8,6 +8,7 @@
     vim
     kitty
     warp-terminal
+    chromium
 
     # Hyprland
     waybar
@@ -30,6 +31,7 @@
     # IDUNOOOO
     spotify
     discord
+    vesktop
     steam
 
     # Sound and video
@@ -52,4 +54,28 @@
     fantasque-sans-mono
     papirus-icon-theme
   ];
+
+  xdg.desktopEntries = {
+    google-chrome = {
+      categories = ["Application" "Network" "WebBrowser"];
+      exec = "google-chrome-stable --enable-features=UseOzonePlatform --ozone-platform=wayland";
+      icon = "google-chrome";
+      name = "Google Chrome";
+      terminal = false;
+      type = "Application";
+    };
+    vencorddesktop = {
+      categories = ["Chat" "Network" "InstantMessaging"];
+      exec = "vencorddesktop --ozone-platform=wayland --disable-gpu %U";
+      genericName = "Internet Messenger";
+      icon = "vencorddesktop";
+      name = "Vesktop";
+      type = "Application";
+      mimeType = ["x-scheme-handler/discord"];
+      settings = {
+        StartupWMClass = "VencordDesktop";
+        Keywords = "discord;vencord;electron;chat";
+      };
+    };
+  };
 }
