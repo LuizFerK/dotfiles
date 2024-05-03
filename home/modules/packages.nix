@@ -64,6 +64,19 @@
       terminal = false;
       type = "Application";
     };
+    discord = {
+      categories = ["Chat" "Network" "InstantMessaging"];
+      exec = "discord --ozone-platform=wayland --disable-gpu %U";
+      genericName = "Internet Messenger";
+      icon = "discord";
+      name = "Discord";
+      type = "Application";
+      mimeType = ["x-scheme-handler/discord"];
+      settings = {
+        StartupWMClass = "Discord";
+        Keywords = "discord;electron;chat";
+      };
+    };
     vencorddesktop = {
       categories = ["Chat" "Network" "InstantMessaging"];
       exec = "vencorddesktop --ozone-platform=wayland --disable-gpu %U";
