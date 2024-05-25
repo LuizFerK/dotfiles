@@ -5,5 +5,5 @@ nix --experimental-features "nix-command flakes" run github:nix-community/disko 
 mkdir /mnt/etc
 cp -r /tmp/nixos /mnt/etc/nixos
 cp -r /tmp/nixos /mnt/persist/nixos
-nixos-install --root /mnt --flake /mnt/etc/nixos#default
+nixos-install --root /mnt --flake /mnt/etc/nixos#nixos
 ```
