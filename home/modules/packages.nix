@@ -20,7 +20,7 @@
 
     # Ui pq eu sou nerd n sei oq n sei oq la
     # flameshot
-    dbeaver
+    dbeaver-bin
     nomad
     postgresql_13
     neofetch
@@ -54,41 +54,4 @@
     fantasque-sans-mono
     papirus-icon-theme
   ];
-
-  xdg.desktopEntries = {
-    google-chrome = {
-      categories = ["Application" "Network" "WebBrowser"];
-      exec = "google-chrome-stable --enable-features=UseOzonePlatform --ozone-platform=wayland";
-      icon = "google-chrome";
-      name = "Google Chrome";
-      terminal = false;
-      type = "Application";
-    };
-    discord = {
-      categories = ["Chat" "Network" "InstantMessaging"];
-      exec = "discord --ozone-platform=wayland --disable-gpu %U";
-      genericName = "Internet Messenger";
-      icon = "discord";
-      name = "Discord";
-      type = "Application";
-      mimeType = ["x-scheme-handler/discord"];
-      settings = {
-        StartupWMClass = "Discord";
-        Keywords = "discord;electron;chat";
-      };
-    };
-    vencorddesktop = {
-      categories = ["Chat" "Network" "InstantMessaging"];
-      exec = "vencorddesktop --ozone-platform=wayland --disable-gpu %U";
-      genericName = "Internet Messenger";
-      icon = "vencorddesktop";
-      name = "Vesktop";
-      type = "Application";
-      mimeType = ["x-scheme-handler/discord"];
-      settings = {
-        StartupWMClass = "VencordDesktop";
-        Keywords = "discord;vencord;electron;chat";
-      };
-    };
-  };
 }
