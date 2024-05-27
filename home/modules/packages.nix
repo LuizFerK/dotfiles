@@ -3,9 +3,11 @@
 {
   home.packages = with pkgs; [
     # Ui pq eu sou nerd n sei oq n sei oq la
+    google-chrome
+    vim
     flameshot
     docker-compose
-    dbeaver
+    dbeaver-bin
     kate
     nomad
     postgresql_13

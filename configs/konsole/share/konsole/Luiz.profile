@@ -23,6 +23,7 @@ UnderlineFilesEnabled=true
 KeyBindings=default
 
 [Scrolling]
+ScrollBarPosition=2
 HistoryMode=1
 
 [Terminal Features]

@@ -2,11 +2,12 @@
   programs.git = {
     enable = true;
     lfs.enable = true;
-    aliases = {
-      s = "status";
-      a = "add";
-      p = "push";
-      c = "commit";
+    userName  = "LuizFerK";
+    userEmail = "luizfernandoklein@live.com";
+    extraConfig = {
+      core = {
+        editor = "vim";
+      };
     };
   };
 }

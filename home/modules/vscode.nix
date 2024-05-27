@@ -21,12 +21,6 @@
           sha256 = "CQVtMdt/fZcNIbH/KybJixnLqCsz5iF1U0k+GfL65Ok=";
         }
         {
-          name = "sweetdracula";
-          publisher = "proxzima";
-          version = "1.0.9";
-          sha256 = "1c1P5sovBX8vaUuyn2rM2pSWGhxjnV2B34uAN8ZLGiY=";
-        }
-        {
           name = "symbols";
           publisher = "miguelsolorio";
           version = "0.0.16";
@@ -48,7 +42,7 @@
           name = "volar";
           publisher = "vue";
           version = "1.8.27";
-          sha256 = "6FktlAJmOD3dQNn2TV83ROw41NXZ/MgquB0RFQqwwW0=";
+          sha256 = "KfWgdz61NURmS1cwFsE9AmIrEykyN5MXIKfG8gDfmac=";
         }
         {
           name = "alphabetical-sorter";
