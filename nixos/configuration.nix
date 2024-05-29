@@ -81,8 +81,6 @@
     powerOnBoot = true;
   };
 
-  services.blueman.enable = true;
-
   # Hardware stuff
   hardware = {
     opengl = {

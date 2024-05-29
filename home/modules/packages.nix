@@ -10,10 +10,12 @@
     dbeaver-bin
     kate
     nomad
-    postgresql_13
+    postgresql_16
     neofetch
     insomnia
     # latte-dock
+
+    bootiso
 
     # IDUNOOOO
     spotify
