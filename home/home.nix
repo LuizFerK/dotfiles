@@ -7,7 +7,7 @@
     ./modules/fish.nix
     ./modules/forceblur.nix
     ./modules/git.nix
-    # ./modules/hyprland.nix
+    ./modules/hyprland.nix
     ./modules/kitty.nix
     ./modules/konsole.nix
     ./modules/kvantum.nix

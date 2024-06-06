@@ -72,10 +72,7 @@
       desktopManager.plasma5.enable = true;
       exportConfiguration = true;
     };
-    displayManager = {
-      autoLogin.user = "luiz";
-      sddm.enable = true;
-    };
+    displayManager.sddm.enable = true;
   };
 
   # Audio

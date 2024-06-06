@@ -1,64 +1,87 @@
 {
-  inputs,
   pkgs,
   config,
   ...
 }: {
-  programs.fuzzel = {
-    enable = true;
-    settings = {
-      main = {
-        terminal = "warp-terminal";
-        # prompt = ">> ";
-        # layer = "overlay";
-      };
-
-      border = {
-        radius = 10;
-        width = 2;
-      };
-    };
-  };
-
   wayland.windowManager.hyprland.enable = true;
-  wayland.windowManager.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+  # wayland.windowManager.hyprland.package = pkgs.unstable.hyprland;
   wayland.windowManager.hyprland.settings = {
-    "$monitor_left" = "HDMI-A-2";
-    "$monitor_center" = "DP-1";
-    "$monitor_right" = "DP-2";
-
     env = [
-      # "LIBVA_DRIVER_NAME,nvidia"
-      "XDG_SESSION_TYPE,wayland"
-      "GBM_BACKEND,nvidia-drm"
-      "__GLX_VENDOR_LIBRARY_NAME,nvidia"
-      "WLR_NO_HARDWARE_CURSORS,1"
+      "XCURSOR_SIZE,24"
+      "HYPRCURSOR_SIZE,24"
     ];
 
     monitor = [
-      "$monitor_left, highres, -2560x0, 1"
-      "$monitor_center, highres, 0x0, 1"
-      "$monitor_right, highres, 2560x0, 1"
+      "HDMI-A-2, highres, -2560x0, 1"
+      "DP-1, highres, 0x0, 1"
+      "DP-2, highres, 2560x0, 1"
     ];
 
     exec-once = [
       "swww init"
       "waybar"
       "discord"
-      # "xwaylandvideobridge"
     ];
 
     input.kb_layout = "us,br";
 
+    general = {
+      gaps_in = 5;
+      gaps_out = 20;
+      border_size = 2;
+
+      "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
+      "col.inactive_border" = "rgba(595959aa)";
+
+      # !!!!!!!!!!!!!!!
+      allow_tearing = false;
+
+      layout = "dwindle";
+    };
+    
+    decoration = {
+      rounding = 10;
+
+      active_opacity = 1;
+      inactive_opacity = 1;
+
+      drop_shadow = true;
+      shadow_range = 4;
+      shadow_render_power = 3;
+      "col.shadow" = "rgba(1a1a1aee)";
+
+      blur = {
+        enabled = true;
+        size = 3;
+        passes = 1;
+
+        vibrancy = 0.1696;
+      };
+    };
+
+    animations = {
+      enabled = true;
+      bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
+
+      animation = [
+        "windows, 1, 7, myBezier"
+        "windowsOut, 1, 7, default, popin 80%"
+        "border, 1, 10, default"
+        "borderangle, 1, 8, default"
+        "fade, 1, 7, default"
+        "workspaces, 1, 6, default"
+      ];
+    };
+
     bind = [
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
       "SUPER, Return, exec, kitty"
-      "SUPER_SHIFT,q,killactive"
+      "SUPER, q, killactive"
       "SUPER, D, exec, rofi -show drun"
       "SUPER, SPACE, exec, hyprctl switchxkblayout sonix-usb-device next"
 
       # "SUPER, M, exit, "
-      # "SUPER, E, exec, dolphin"
+      "SUPER, E, exec, dolphin"
       "SUPER, F, fullscreen, 1"
       "SUPER, T, togglegroup, "
       "SUPER, V, togglefloating, "
@@ -117,162 +140,262 @@
       "SUPER, mouse:273, resizewindow"
     ];
 
-    # workspace = [
-    #   # Set stick workspaces to the monitors
-    #   "1, monitor:$monitor_left"
-    #   "3, monitor:$monitor_left"
-
-    #   "2, monitor:$monitor_center"
-    #   "4, monitor:$monitor_center"
-
-    #   "6, monitor:$monitor_right"
-    # ];
-
-    general = {
-      # See https://wiki.hyprland.org/Configuring/Variables/ for more
-
-      gaps_in = 4;
-      gaps_out = 5;
-      border_size = 0;
-
-      # "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-      # "col.inactive_border" = "rgba(595959aa)";
-
-      layout = "dwindle";
-    };
-
-    decoration = {
-      # See https://wiki.hyprland.org/Configuring/Variables/ for more
-
-      rounding = 10;
-      blur = {
-        enabled = true;
-        xray = true;
-        ignore_opacity = true;
-        new_optimizations = "on";
-        size = 1;
-        passes = 4;
-      };
-
-      drop_shadow = "yes";
-      shadow_range = 4;
-      shadow_render_power = 3;
-      "col.shadow" = "rgba(1a1a1aee)";
-
-      dim_inactive = false;
-      dim_strength = 0.1;
-      dim_special = 0;
-    };
-
-    animations = {
-      enabled = "yes";
-      bezier = [
-        "linear, 0, 0, 1, 1"
-        "md3_standard, 0.2, 0, 0, 1"
-        "md3_decel, 0.05, 0.7, 0.1, 1"
-        "md3_accel, 0.3, 0, 0.8, 0.15"
-        "overshot, 0.05, 0.9, 0.1, 1.1"
-        "crazyshot, 0.1, 1.5, 0.76, 0.92 "
-        "hyprnostretch, 0.05, 0.9, 0.1, 1.0"
-        "fluent_decel, 0.1, 1, 0, 1"
-        "easeInOutCirc, 0.85, 0, 0.15, 1"
-        "easeOutCirc, 0, 0.55, 0.45, 1"
-        "easeOutExpo, 0.16, 1, 0.3, 1"
-      ];
-      # Animation configs
-
-      animation = [
-        "windows, 1, 3, md3_decel, popin 60%"
-        "border, 1, 10, default"
-        "fade, 1, 2.5, md3_decel"
-        # "workspaces, 1, 3.5, md3_decel, slide"
-        "workspaces, 1, 7, fluent_decel, slide"
-        # "workspaces, 1, 7, fluent_decel, slidefade 15%"
-        # "specialWorkspace, 1, 3, md3_decel, slidefadevert 15%"
-        "specialWorkspace, 1, 3, md3_decel, slidevert"
-      ];
-    };
-
-    misc = {
-      vfr = 1;
-      vrr = 1;
-      # layers_hog_mouse_focus = true;
-      focus_on_activate = true;
-      animate_manual_resizes = false;
-      animate_mouse_windowdragging = false;
-      enable_swallow = false;
-      swallow_regex = "(foot|kitty|allacritty|Alacritty)";
-
-      disable_hyprland_logo = true;
-      force_default_wallpaper = 0;
-      new_window_takes_over_fullscreen = 2;
-    };
-
-    windowrule = [
-      # Dialogs
-      "float,title:^(Open File)(.*)$"
-      "float,title:^(Select a File)(.*)$"
-      "float,title:^(Choose wallpaper)(.*)$"
-      "float,title:^(Open Folder)(.*)$"
-      "float,title:^(Save As)(.*)$"
-      "float,title:^(Library)(.*)$"
-    ];
-
     windowrulev2 = [
-      "opacity 0.95 0.95,class:^(Alacritty|Discord|Spotify)$"
-      "opacity 1 0.6,class:(kitty)"
-      
-      "tile,class:^(dev.warp.Warp)$"
-
-      "noblur,class:^(dash)$"
-      "noborder,class:^(dash)$"
-      "noshadow,class:^(dash)$"
-
-      # XWaylandVideoBridge
-      "opacity 0.0 override 0.0 override,class:^(xwaylandvideobridge)$"
-      "noanim,class:^(xwaylandvideobridge)$"
-      "noinitialfocus,class:^(xwaylandvideobridge)$"
-      "maxsize 1 1,class:^(xwaylandvideobridge)$"
-      "noblur,class:^(xwaylandvideobridge)$"
+      "suppressevent maximize,class:.*"
     ];
-  };
-
-  wayland.windowManager.hyprland.extraConfig = ''
-    # window resize
-    bind = SUPER, R, submap, resize
-
-    submap = resize
-    binde = , l, resizeactive, 30 0
-    binde = , j, resizeactive, -30 0
-    binde = , i, resizeactive, 0 -30
-    binde = , k, resizeactive, 0 30
-    bind = , escape, submap, reset
-    submap = reset
-  '';
-
-  home.pointerCursor = {
-    gtk.enable = true;
-    # x11.enable = true;
-    package = pkgs.bibata-cursors;
-    name = "Bibata-Modern-Classic";
-    size = 8;
-  };
-
-  gtk = {
-    enable = true;
-    theme = {
-      package = pkgs.flat-remix-gtk;
-      name = "Flat-Remix-GTK-Grey-Darkest";
-    };
-
-    iconTheme = {
-      package = pkgs.gnome.adwaita-icon-theme;
-      name = "Adwaita";
-    };
-
-    font = {
-      name = "Sans";
-      size = 10;
-    };
   };
 }
+
+# # #######################################################################################
+# # AUTOGENERATED HYPR CONFIG.
+# # PLEASE USE THE CONFIG PROVIDED IN THE GIT REPO /examples/hypr.conf AND EDIT IT,
+# # OR EDIT THIS ONE ACCORDING TO THE WIKI INSTRUCTIONS.
+# # #######################################################################################
+
+
+# # This is an example Hyprland config file.
+# # Refer to the wiki for more information.
+# # https://wiki.hyprland.org/Configuring/Configuring-Hyprland/
+
+# # Please note not all available settings / options are set here.
+# # For a full list, see the wiki
+
+# # You can split this configuration into multiple files
+# # Create your files separately and then link them to this file like this:
+# # source = ~/.config/hypr/myColors.conf
+
+
+# ################
+# ### MONITORS ###
+# ################
+
+# # See https://wiki.hyprland.org/Configuring/Monitors/
+# monitor=,preferred,auto,auto
+
+
+# ###################
+# ### MY PROGRAMS ###
+# ###################
+
+# # See https://wiki.hyprland.org/Configuring/Keywords/
+
+# # Set programs that you use
+# $terminal = kitty
+# $fileManager = dolphin
+# $menu = rofi -show drun
+
+
+# #################
+# ### AUTOSTART ###
+# #################
+
+# # Autostart necessary processes (like notifications daemons, status bars, etc.)
+# # Or execute your favorite apps at launch like this:
+
+# # exec-once = $terminal
+# # exec-once = nm-applet &
+# # exec-once = waybar & hyprpaper & firefox
+
+
+# #############################
+# ### ENVIRONMENT VARIABLES ###
+# #############################
+
+# # See https://wiki.hyprland.org/Configuring/Environment-variables/
+
+# env = XCURSOR_SIZE,24
+# env = HYPRCURSOR_SIZE,24
+
+
+# #####################
+# ### LOOK AND FEEL ###
+# #####################
+
+# # Refer to https://wiki.hyprland.org/Configuring/Variables/
+
+# # https://wiki.hyprland.org/Configuring/Variables/#general
+# general { 
+#     gaps_in = 5
+#     gaps_out = 20
+
+#     border_size = 2
+
+#     # https://wiki.hyprland.org/Configuring/Variables/#variable-types for info about colors
+#     col.active_border = rgba(33ccffee) rgba(00ff99ee) 45deg
+#     col.inactive_border = rgba(595959aa)
+
+#     # Set to true enable resizing windows by clicking and dragging on borders and gaps
+#     resize_on_border = false 
+
+#     # Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
+#     allow_tearing = false
+
+#     layout = dwindle
+# }
+
+# # https://wiki.hyprland.org/Configuring/Variables/#decoration
+# decoration {
+#     rounding = 10
+
+#     # Change transparency of focused and unfocused windows
+#     active_opacity = 1.0
+#     inactive_opacity = 1.0
+
+#     drop_shadow = true
+#     shadow_range = 4
+#     shadow_render_power = 3
+#     col.shadow = rgba(1a1a1aee)
+
+#     # https://wiki.hyprland.org/Configuring/Variables/#blur
+#     blur {
+#         enabled = true
+#         size = 3
+#         passes = 1
+        
+#         vibrancy = 0.1696
+#     }
+# }
+
+# # https://wiki.hyprland.org/Configuring/Variables/#animations
+# animations {
+#     enabled = true
+
+#     # Default animations, see https://wiki.hyprland.org/Configuring/Animations/ for more
+
+#     bezier = myBezier, 0.05, 0.9, 0.1, 1.05
+
+#     animation = windows, 1, 7, myBezier
+#     animation = windowsOut, 1, 7, default, popin 80%
+#     animation = border, 1, 10, default
+#     animation = borderangle, 1, 8, default
+#     animation = fade, 1, 7, default
+#     animation = workspaces, 1, 6, default
+# }
+
+# # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
+# dwindle {
+#     pseudotile = true # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
+#     preserve_split = true # You probably want this
+# }
+
+# # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
+# master {
+#     new_is_master = true
+# }
+
+# # https://wiki.hyprland.org/Configuring/Variables/#misc
+# misc { 
+#     force_default_wallpaper = -1 # Set to 0 or 1 to disable the anime mascot wallpapers
+#     disable_hyprland_logo = false # If true disables the random hyprland logo / anime girl background. :(
+# }
+
+
+# #############
+# ### INPUT ###
+# #############
+
+# # https://wiki.hyprland.org/Configuring/Variables/#input
+# input {
+#     kb_layout = us
+#     kb_variant =
+#     kb_model =
+#     kb_options =
+#     kb_rules =
+
+#     follow_mouse = 1
+
+#     sensitivity = 0 # -1.0 - 1.0, 0 means no modification.
+
+#     touchpad {
+#         natural_scroll = false
+#     }
+# }
+
+# # https://wiki.hyprland.org/Configuring/Variables/#gestures
+# gestures {
+#     workspace_swipe = false
+# }
+
+# # Example per-device config
+# # See https://wiki.hyprland.org/Configuring/Keywords/#per-device-input-configs for more
+# device {
+#     name = epic-mouse-v1
+#     sensitivity = -0.5
+# }
+
+
+# ####################
+# ### KEYBINDINGSS ###
+# ####################
+
+# # See https://wiki.hyprland.org/Configuring/Keywords/
+# $mainMod = SUPER # Sets "Windows" key as main modifier
+
+# # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
+# bind = $mainMod, C, exec, $terminal
+# bind = $mainMod, Q, killactive,
+# bind = $mainMod, M, exit,
+# bind = $mainMod, E, exec, $fileManager
+# bind = $mainMod, V, togglefloating,
+# bind = $mainMod, D, exec, $menu
+# bind = $mainMod, F, fullscreen, 1
+# bind = $mainMod, P, pseudo, # dwindle
+# bind = $mainMod, J, togglesplit, # dwindle
+
+# # Move focus with mainMod + arrow keys
+# bind = $mainMod, left, movefocus, l
+# bind = $mainMod, right, movefocus, r
+# bind = $mainMod, up, movefocus, u
+# bind = $mainMod, down, movefocus, d
+
+# # Switch workspaces with mainMod + [0-9]
+# bind = $mainMod, 1, workspace, 1
+# bind = $mainMod, 2, workspace, 2
+# bind = $mainMod, 3, workspace, 3
+# bind = $mainMod, 4, workspace, 4
+# bind = $mainMod, 5, workspace, 5
+# bind = $mainMod, 6, workspace, 6
+# bind = $mainMod, 7, workspace, 7
+# bind = $mainMod, 8, workspace, 8
+# bind = $mainMod, 9, workspace, 9
+# bind = $mainMod, 0, workspace, 10
+
+# # Move active window to a workspace with mainMod + SHIFT + [0-9]
+# bind = $mainMod SHIFT, 1, movetoworkspace, 1
+# bind = $mainMod SHIFT, 2, movetoworkspace, 2
+# bind = $mainMod SHIFT, 3, movetoworkspace, 3
+# bind = $mainMod SHIFT, 4, movetoworkspace, 4
+# bind = $mainMod SHIFT, 5, movetoworkspace, 5
+# bind = $mainMod SHIFT, 6, movetoworkspace, 6
+# bind = $mainMod SHIFT, 7, movetoworkspace, 7
+# bind = $mainMod SHIFT, 8, movetoworkspace, 8
+# bind = $mainMod SHIFT, 9, movetoworkspace, 9
+# bind = $mainMod SHIFT, 0, movetoworkspace, 10
+
+# # Example special workspace (scratchpad)
+# bind = $mainMod, S, togglespecialworkspace, magic
+# bind = $mainMod SHIFT, S, movetoworkspace, special:magic
+
+# # Scroll through existing workspaces with mainMod + scroll
+# bind = $mainMod, mouse_down, workspace, e+1
+# bind = $mainMod, mouse_up, workspace, e-1
+
+# # Move/resize windows with mainMod + LMB/RMB and dragging
+# bindm = $mainMod, mouse:272, movewindow
+# bindm = $mainMod, mouse:273, resizewindow
+
+
+# ##############################
+# ### WINDOWS AND WORKSPACES ###
+# ##############################
+
+# # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
+# # See https://wiki.hyprland.org/Configuring/Workspace-Rules/ for workspace rules
+
+# # Example windowrule v1
+# # windowrule = float, ^(kitty)$
+
+# # Example windowrule v2
+# # windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
+
+# windowrulev2 = suppressevent maximize, class:.* # You'll probably like this.
