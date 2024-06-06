@@ -1,9 +1,17 @@
-{ config, lib, pkgs, inputs, ... }:
+{ config, lib, pkgs, inputs, outputs, ... }:
 
 {
   imports = [
     ./hardware-configuration.nix
   ];
+
+  # Nixpkgs
+  nixpkgs = {
+    overlays = [
+      outputs.overlays.unstable-packages
+    ];
+    config.allowUnfree = true;
+  };
 
   # Grub
   boot.loader = {
@@ -35,7 +43,7 @@
   virtualisation.docker.enable = true;
   security.sudo.wheelNeedsPassword = false;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  nixpkgs.config.allowUnfree = true;
+
 
   # Home manager
   programs.fuse.userAllowOther = true;
@@ -45,6 +53,12 @@
     users = {
       luiz = import ../home/home.nix;
     };
+  };
+
+  # Hyprland
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
   };
 
   services = {
@@ -59,8 +73,8 @@
       exportConfiguration = true;
     };
     displayManager = {
-      sddm.enable = true;
       autoLogin.user = "luiz";
+      sddm.enable = true;
     };
   };
 
@@ -96,7 +110,7 @@
     };
   };
 
-  boot.kernelPackages = pkgs.linuxPackages_6_8;
+  boot.kernelPackages = pkgs.unstable.linuxPackages_zen;
 
   # Wipe off root filesystem on reboot
   # boot.initrd.postDeviceCommands = lib.mkAfter ''
