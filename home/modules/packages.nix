@@ -15,6 +15,15 @@
     insomnia
     # latte-dock
 
+    # Hyprland
+    kitty
+    waybar
+    swww
+    grim
+    wl-clipboard
+    slurp
+    rofi-wayland
+
     bootiso
 
     # IDUNOOOO
