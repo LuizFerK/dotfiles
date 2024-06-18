@@ -12,8 +12,10 @@
     ./modules/konsole.nix
     ./modules/kvantum.nix
     ./modules/rofi.nix
+    # ./modules/spicetify.nix
     ./modules/ssh.nix
     ./modules/swww.nix
+    ./modules/vesktop.nix
     ./modules/vscode.nix
     ./modules/waybar.nix
   ];

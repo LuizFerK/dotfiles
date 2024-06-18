@@ -149,6 +149,10 @@
       "SUPER, O, movetoworkspace, special"
     ];
 
+    windowrulev2 = [
+      # "float,title:^(.*)(Extension:)(.*)(- Bitwarden)(.*)$"
+    ];
+
     bindm = [
       # Move/resize windows with mainMod + LMB/RMB and dragging
       "SUPER, mouse:272, movewindow"

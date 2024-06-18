@@ -29,6 +29,7 @@
     # IDUNOOOO
     spotify
     discord
+    vesktop
     steam
 
     # Sound and video
