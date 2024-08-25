@@ -5,6 +5,8 @@
 }: {
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
+    source = ["~/.config/hypr/colors.conf"];
+
     env = [
       "XCURSOR_SIZE,24"
       "HYPRCURSOR_SIZE,24"
@@ -19,7 +21,7 @@
     exec-once = [
       "swww init"
       "waybar"
-      "discord"
+      "vesktop"
     ];
 
     input.kb_layout = "us,br";
@@ -29,8 +31,8 @@
       gaps_out = 5;
       border_size = 2;
 
-      "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-      "col.inactive_border" = "rgba(595959aa)";
+      # "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
+      # "col.inactive_border" = "rgba(595959aa)";
 
       # !!!!!!!!!!!!!!!
       allow_tearing = false;
@@ -57,7 +59,7 @@
       blur = {
         enabled = true;
         size = 3;
-        passes = 1;
+        passes = 3;
 
         vibrancy = 0.1696;
       };
@@ -81,7 +83,7 @@
       animation = [
         "windows, 1, 3, md3_decel, popin 60%"
         "border, 1, 10, default"
-        "borderangle, 1, 500, linear, loop"
+        "borderangle, 1, 50, linear, loop"
         "fade, 1, 2.5, md3_decel"
         "workspaces, 1, 7, fluent_decel, slide"
         "specialWorkspace, 1, 3, md3_decel, slidevert"

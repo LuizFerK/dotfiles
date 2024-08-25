@@ -1,7 +1,16 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   home.packages = with pkgs; [
+    inputs.zen-browser.packages."${system}".default
+
+    ripgrep
+    wallust
+    gcc
+    stylua
+    unzip
+    btop
+
     # Ui pq eu sou nerd n sei oq n sei oq la
     google-chrome
     vim

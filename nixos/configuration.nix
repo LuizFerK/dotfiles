@@ -36,10 +36,11 @@
     isNormalUser = true;
     initialPassword = "1";
     shell = pkgs.fish;
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "adbusers" ];
   };
 
   programs.fish.enable = true;
+  programs.adb.enable = true;
   virtualisation.docker.enable = true;
   security.sudo.wheelNeedsPassword = false;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -48,7 +49,7 @@
   # Home manager
   programs.fuse.userAllowOther = true;
   home-manager = {
-    extraSpecialArgs = {inherit inputs;};
+    extraSpecialArgs = {inherit inputs outputs;};
     backupFileExtension = "backup";
     users = {
       luiz = import ../home/home.nix;

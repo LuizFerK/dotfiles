@@ -6,6 +6,7 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     impermanence.url = "github:nix-community/impermanence";
     spicetify-nix.url = "github:the-argus/spicetify-nix";
+    zen-browser.url = "github:MarceColl/zen-browser-flake";
 
     disko = {
       url = "github:nix-community/disko";

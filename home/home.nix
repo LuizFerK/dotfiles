@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, outputs, pkgs, ... }:
 
 {
   imports = [
@@ -11,6 +11,7 @@
     ./modules/kitty.nix
     ./modules/konsole.nix
     ./modules/kvantum.nix
+    ./modules/nvim.nix
     ./modules/rofi.nix
     # ./modules/spicetify.nix
     ./modules/ssh.nix
@@ -32,6 +33,9 @@
       allowUnfree = true;
       allowUnfreePredicate = _: true;
     };
+    overlays = [
+      outputs.overlays.unstable-packages
+    ];
   };
 
   programs.home-manager.enable = true;
