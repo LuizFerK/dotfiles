@@ -113,15 +113,15 @@
       ", XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
 
       # Window movement
-      "SUPER,j,movefocus,l"
+      "SUPER,h,movefocus,l"
       "SUPER,l,movefocus,r"
-      "SUPER,i,movefocus,u"
-      "SUPER,k,movefocus,d"
+      "SUPER,k,movefocus,u"
+      "SUPER,j,movefocus,d"
 
-      "SUPER_SHIFT,j,swapwindow,l"
+      "SUPER_SHIFT,h,swapwindow,l"
       "SUPER_SHIFT,l,swapwindow,r"
-      "SUPER_SHIFT,i,swapwindow,u"
-      "SUPER_SHIFT,k,swapwindow,d"
+      "SUPER_SHIFT,k,swapwindow,u"
+      "SUPER_SHIFT,j,swapwindow,d"
 
       # Switch workspaces with mainMod + [0-9]
       "SUPER, 1, workspace, 1"
