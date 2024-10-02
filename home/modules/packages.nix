@@ -10,6 +10,8 @@
     stylua
     unzip
     btop
+    rars
+    pavucontrol
 
     # Ui pq eu sou nerd n sei oq n sei oq la
     google-chrome
@@ -22,6 +24,7 @@
     postgresql_16
     neofetch
     insomnia
+    jetbrains.datagrip
     # latte-dock
 
     # Hyprland

@@ -13,6 +13,11 @@
     config.allowUnfree = true;
   };
 
+  # Pkgs
+  environment.systemPackages = [
+    (pkgs.callPackage ../pkgs/cursor.nix {})
+  ];
+
   # Grub
   boot.loader = {
     efi.canTouchEfiVariables = true;
