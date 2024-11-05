@@ -161,4 +161,11 @@
       "SUPER, mouse:273, resizewindow"
     ];
   };
+
+  home.pointerCursor = {
+    gtk.enable = true;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Classic";
+    size = 12;
+  };
 }

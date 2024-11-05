@@ -6,8 +6,8 @@
   "workbench.startupEditor": "none",
   "symbols.hidesExplorerArrows": false,
   "window.menuBarVisibility": "hidden",
+  "workbench.activityBar.orientation": "vertical",
   "workbench.iconTheme": "symbols",
-  "workbench.productIconTheme": "fluent-icons",
   "workbench.colorTheme": "Sweet Dracula",
   "workbench.colorCustomizations": {
     "[Sweet Dracula]": {
@@ -49,5 +49,8 @@
     "phoenix-heex": "html",
     "elixir": "html"
   },
-  "elixirLS.suggestSpecs": false
+  "elixirLS.suggestSpecs": false,
+  "window.titleBarStyle": "native",
+  "editor.minimap.enabled": true,
+  "workbench.productIconTheme": "fluent-icons"
 }

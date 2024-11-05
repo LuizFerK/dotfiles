@@ -25,6 +25,7 @@
     neofetch
     insomnia
     jetbrains.datagrip
+    unstable.code-cursor
     # latte-dock
 
     # Hyprland

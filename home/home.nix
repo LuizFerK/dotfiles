@@ -4,6 +4,7 @@
   imports = [
     ./modules/packages.nix
 
+    ./modules/entries.nix
     ./modules/fish.nix
     ./modules/forceblur.nix
     ./modules/git.nix
@@ -15,9 +16,11 @@
     ./modules/rofi.nix
     # ./modules/spicetify.nix
     ./modules/ssh.nix
-    ./modules/swww.nix
     ./modules/vesktop.nix
     ./modules/vscode.nix
+    ./modules/wallpapers.nix
+    ./modules/wallpicker.nix
+    ./modules/wallust.nix
     ./modules/waybar.nix
   ];
 
