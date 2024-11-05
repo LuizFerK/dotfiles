@@ -20,7 +20,7 @@
 
 
 # Set some variables
-wall_dir="${HOME}/.config/wallpapers/"
+wall_dir="${HOME}/.dotfiles/wallpapers/"
 cacheDir="${HOME}/.cache/jp/${theme}"
 rofi_command="rofi -show -dmenu -theme ${HOME}/.config/wallpicker/wallSelect.rasi -theme-str ${rofi_override}"
 

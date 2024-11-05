@@ -18,7 +18,6 @@
     ./modules/ssh.nix
     ./modules/vesktop.nix
     ./modules/vscode.nix
-    ./modules/wallpapers.nix
     ./modules/wallpicker.nix
     ./modules/wallust.nix
     ./modules/waybar.nix
