@@ -8,14 +8,7 @@
   "window.menuBarVisibility": "hidden",
   "workbench.activityBar.orientation": "vertical",
   "workbench.iconTheme": "symbols",
-  "workbench.colorTheme": "Sweet Dracula",
-  "workbench.colorCustomizations": {
-    "[Sweet Dracula]": {
-      "statusBar.background": "#161925",
-      "activityBar.background": "#161925",
-      "activityBar.border": "#161925"
-    }
-  },
+  "workbench.colorTheme": "OM Theme (No Italic)",
   "files.exclude": {
     "_build": true,
     ".nix-hex": true,
@@ -53,4 +46,16 @@
   "window.titleBarStyle": "native",
   "editor.minimap.enabled": true,
   "workbench.productIconTheme": "fluent-icons"
+  // "workbench.colorCustomizations": {
+  //   "editor.background": "#141c29",
+  //   "activityBar.background": "#141c29",
+  //   "statusBar.background": "#141c29",
+  //   "sideBar.background": "#141c29",
+  //   "tab.inactiveBackground": "#141c29",
+  //   "minimap.background": "#141c29",
+  //   "editorGroup.border": "#141c29",
+  //   "editorGroup.emptyBackground": "#141c29",
+  //   "editorGroupHeader.tabsBackground": "#141c29",
+  //   "editorPane.background": "#141c29"
+  // }
 }

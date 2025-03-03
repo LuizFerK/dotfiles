@@ -109,8 +109,6 @@
     };
   };
 
-  boot.kernelPackages = pkgs.unstable.linuxPackages_zen;
-
   # Wipe off root filesystem on reboot
   # boot.initrd.postDeviceCommands = lib.mkAfter ''
   #   mkdir /btrfs_tmp

@@ -2,10 +2,9 @@
 
 {
   home.packages = with pkgs; [
-    inputs.zen-browser.packages."${system}".default
-
     ripgrep
     wallust
+    pywal
     gcc
     stylua
     unzip
@@ -15,6 +14,8 @@
 
     # Ui pq eu sou nerd n sei oq n sei oq la
     google-chrome
+    firefox
+    lazydocker
     vim
     flameshot
     docker-compose

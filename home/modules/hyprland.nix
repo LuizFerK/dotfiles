@@ -153,6 +153,9 @@
 
     windowrulev2 = [
       # "float,title:^(.*)(Extension:)(.*)(- Bitwarden)(.*)$"
+      "opacity 0.85 0.85,class:^(Code)$"
+      "opacity 0.85 0.85,class:^(Cursor)$"
+      "opacity 0.85 0.85,class:^(firefox)$"
     ];
 
     bindm = [
