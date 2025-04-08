@@ -27,6 +27,7 @@
     insomnia
     jetbrains.datagrip
     unstable.code-cursor
+    nix-your-shell
     # latte-dock
 
     # Hyprland
