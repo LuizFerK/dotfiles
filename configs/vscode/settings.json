@@ -6,6 +6,7 @@
   "workbench.startupEditor": "none",
   "symbols.hidesExplorerArrows": false,
   "window.menuBarVisibility": "hidden",
+  "window.customTitleBarVisibility": "never",
   "workbench.activityBar.orientation": "vertical",
   "workbench.iconTheme": "symbols",
   "workbench.colorTheme": "OM Theme (No Italic)",

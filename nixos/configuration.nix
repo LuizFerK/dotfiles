@@ -77,7 +77,6 @@
   };
 
   # Audio
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -96,10 +95,9 @@
 
   # Hardware stuff
   hardware = {
-    opengl = {
+    graphics = {
       enable = true;
-      driSupport = true;
-      driSupport32Bit = true;
+      enable32Bit = true;
     };
     nvidia = {
       modesetting.enable = true;

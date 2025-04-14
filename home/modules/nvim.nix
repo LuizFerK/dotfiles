@@ -22,7 +22,6 @@
         cssls = { "${unstable.vscode-langservers-extracted}/bin/vscode-css-language-server", "--stdio" },
         marksman = { "${unstable.marksman}/bin/marksman", "server" },
         tsserver = { "${unstable.nodePackages.typescript-language-server}/bin/typescript-language-server", "--stdio" },
-        volar = { "${nodePackages.volar}/bin/vue-language-server", "--stdio" },
         nil_ls = { "${unstable.nil}/bin/nil" },
         lua_ls = { "${unstable.lua-language-server}/bin/lua-language-server" },
         tailwindcss = { "${unstable.tailwindcss-language-server}/bin/tailwindcss-language-server" }
@@ -38,7 +37,6 @@
     unstable.vscode-langservers-extracted
     unstable.marksman
     unstable.nodePackages.typescript-language-server
-    nodePackages.volar
     unstable.nil
     unstable.lua-language-server
     unstable.tailwindcss-language-server
