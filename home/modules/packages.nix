@@ -40,6 +40,7 @@
     rofi-wayland
 
     bootiso
+    woeusb
 
     # IDUNOOOO
     spotify

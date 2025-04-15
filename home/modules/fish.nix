@@ -18,7 +18,7 @@
       
       # NixOS
       nixos-switch = "sudo nixos-rebuild switch --flake ~/.dotfiles";
-      flake-update = "sudo nix flake update ~/.dotfiles";
+      flake-update = "sudo nix flake update --flake ~/.dotfiles";
 
       # Granter
       ciasc-vpn = "sudo openfortivpn sslvpn01.ciasc.gov.br --username=granter_lklein@vpn.ciasc.gov.br";
