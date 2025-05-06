@@ -9,14 +9,18 @@
       # Git
       g = "git";
       ga = "git add";
-      gs = "git status";
       gc = "git commit";
+      gd = "git diff";
+      gl = "git log";
       gp = "git push";
+      gr = "git reset";
+      gs = "git status";
       gco = "git checkout";
       gcb = "git checkout -b";
       gcp = "git cherry-pick";
       
       # NixOS
+      nd = "nix develop";
       nixos-switch = "sudo nixos-rebuild switch --flake ~/.dotfiles";
       flake-update = "sudo nix flake update --flake ~/.dotfiles";
 
