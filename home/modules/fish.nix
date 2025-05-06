@@ -21,6 +21,7 @@
       
       # NixOS
       nd = "nix develop";
+      ngc = "sudo nix-collect-garbage -d";
       nixos-switch = "sudo nixos-rebuild switch --flake ~/.dotfiles";
       flake-update = "sudo nix flake update --flake ~/.dotfiles";
 
