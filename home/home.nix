@@ -12,7 +12,6 @@
     ./modules/kitty.nix
     ./modules/konsole.nix
     ./modules/kvantum.nix
-    ./modules/nvim.nix
     ./modules/rofi.nix
     # ./modules/spicetify.nix
     ./modules/ssh.nix
