@@ -46,7 +46,8 @@
   "elixirLS.suggestSpecs": false,
   "window.titleBarStyle": "native",
   "editor.minimap.enabled": true,
-  "workbench.productIconTheme": "fluent-icons"
+  "workbench.productIconTheme": "fluent-icons",
+  "git.openRepositoryInParentFolders": "always"
   // "workbench.colorCustomizations": {
   //   "editor.background": "#141c29",
   //   "activityBar.background": "#141c29",
