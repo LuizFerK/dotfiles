@@ -10,14 +10,14 @@
       g = "git";
       ga = "git add";
       gc = "git commit";
+      gcb = "git checkout -b";
+      gco = "git checkout";
+      gcp = "git cherry-pick";
       gd = "git diff";
       gl = "git log";
       gp = "git push";
-      gr = "git reset";
+      gpl = "git pull";
       gs = "git status";
-      gco = "git checkout";
-      gcb = "git checkout -b";
-      gcp = "git cherry-pick";
       
       # NixOS
       nd = "nix develop";
