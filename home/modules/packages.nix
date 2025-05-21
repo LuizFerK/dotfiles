@@ -8,6 +8,7 @@
     gcc
     stylua
     unzip
+    zip
     btop
     rars
     pavucontrol

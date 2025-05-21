@@ -9,6 +9,7 @@
       package = pkgs.jetbrains-mono;
       size = 12;
     };
+    themeFile = "cherry-midnight";
     settings = {
       include = "~/.config/kitty/theme.conf";
       background_opacity = "0.5";

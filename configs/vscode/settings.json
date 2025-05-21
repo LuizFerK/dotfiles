@@ -7,9 +7,10 @@
   "symbols.hidesExplorerArrows": false,
   "window.menuBarVisibility": "hidden",
   "window.customTitleBarVisibility": "never",
+  "workbench.activityBar.location": "hidden",
   "workbench.activityBar.orientation": "vertical",
   "workbench.iconTheme": "symbols",
-  "workbench.colorTheme": "OM Theme (No Italic)",
+  "workbench.colorTheme": "Dark Horizon",
   "files.exclude": {
     "_build": true,
     ".nix-hex": true,
