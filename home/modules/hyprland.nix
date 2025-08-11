@@ -13,7 +13,9 @@
     ];
 
     monitor = [
-      "eDP-1, highres, 0x0, 1"
+      "HDMI-A-2, highres, -2560x0, 1"
+      "DP-1, highres, 0x0, 1"
+      "DP-2, highres, 2560x0, 1"
     ];
 
     exec-once = [
@@ -22,7 +24,7 @@
       "vesktop"
     ];
 
-    input.kb_layout = "br";
+    input.kb_layout = "us,br";
 
     general = {
       gaps_in = 4;
