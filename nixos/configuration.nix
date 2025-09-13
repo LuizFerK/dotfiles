@@ -70,15 +70,15 @@
         layout = "us";
         variant = "intl";
       };
-      desktopManager.plasma5.enable = true;
       exportConfiguration = true;
     };
+    desktopManager.plasma6.enable = true;
     displayManager.sddm.enable = true;
   };
 
   # Audio
-  hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
+  services.pulseaudio.enable = false;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -106,6 +106,20 @@
       package = config.boot.kernelPackages.nvidiaPackages.beta;
     };
   };
+
+  # TODO: This should be moved to home manager
+  fonts.packages = with pkgs; [
+    jetbrains-mono
+    fira-code
+    fira-code-symbols
+    material-icons
+    material-design-icons
+    noto-fonts
+    font-awesome
+    terminus_font
+    fantasque-sans-mono
+    papirus-icon-theme
+  ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
   # Wipe off root filesystem on reboot
   # boot.initrd.postDeviceCommands = lib.mkAfter ''

@@ -12,6 +12,8 @@
     btop
     rars
     pavucontrol
+    wpsoffice
+    cmake
 
     # Ui pq eu sou nerd n sei oq n sei oq la
     google-chrome
@@ -21,7 +23,6 @@
     flameshot
     docker-compose
     dbeaver-bin
-    kate
     nomad
     postgresql_16
     neofetch
@@ -54,19 +55,5 @@
 
     # Networking
     openfortivpn
-
-    # Fonts
-    nerdfonts
-    jetbrains-mono
-    fira-code
-    fira-code-symbols
-    material-icons
-    material-design-icons
-    noto-fonts
-    font-awesome
-    terminus_font
-    terminus-nerdfont
-    fantasque-sans-mono
-    papirus-icon-theme
   ];
 }
