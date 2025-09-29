@@ -17,14 +17,17 @@
       services.useFahrenheit = false;
       notifs.actionOnClick = true;
       paths = {
-        wallpaperDir = "~/.dotfiles/wallpapers";
+        wallpaperDir = "~/.dotfiles/assets/wallpapers";
         mediaGif = "root:/assets/bongocat.gif";
-        sessionGif = "root:/assets/bongocat.gif";
+        sessionGif = "~/.dotfiles/assets/gifs/rainbowcat.gif";
       };
     };
     cli = {
       enable = true;
       settings.theme.enableGtk = false;
     };
+  };
+  home.file.".face" = {
+    source = ../../assets/gifs/smokingcat.gif;
   };
 }
