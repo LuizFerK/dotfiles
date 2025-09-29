@@ -15,6 +15,9 @@
       bar.status = {
         showBattery = false;
       };
+      services = {
+        useFahrenheit = false;
+      };
       paths.wallpaperDir = "~/.dotfiles/wallpapers";
     };
     cli = {
