@@ -156,6 +156,19 @@
       "opacity 0.85 0.85,class:^(firefox)$"
     ];
 
+    layerrule = [
+      "noanim, caelestia-(launcher|osd|notifications|border-exclusion|area-picker)"
+      "animation fade, caelestia-(drawers|background)"
+      "order 1, caelestia-border-exclusion"
+      "order 2, caelestia-bar"
+      "xray 1, caelestia-(border|launcher|bar|sidebar|navbar|mediadisplay|screencorners)"
+      "blur, caelestia-.*"
+      "blur, qs-.*"
+      "blurpopups, caelestia-.*"
+      "ignorealpha 0.85, caelestia-.*"
+    ];
+
+
     bindm = [
       # Move/resize windows with mainMod + LMB/RMB and dragging
       "SUPER, mouse:272, movewindow"
