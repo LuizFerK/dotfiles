@@ -12,7 +12,6 @@
     ./modules/ssh.nix
     ./modules/vesktop.nix
     ./modules/vscode.nix
-    ./modules/wallust.nix
     ./modules/caelestia.nix
   ];
 
@@ -21,7 +20,6 @@
     homeDirectory = "/home/luiz";
     stateVersion = "23.11";
   };
-
 
   nixpkgs = {
     config = {

@@ -15,7 +15,7 @@
       bar.status = {
         showBattery = false;
       };
-      paths.wallpaperDir = "~/Images";
+      paths.wallpaperDir = "~/.dotfiles/wallpapers";
     };
     cli = {
       enable = true; # Also add caelestia-cli to path

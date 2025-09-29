@@ -10,7 +10,7 @@
   "workbench.activityBar.location": "hidden",
   "workbench.activityBar.orientation": "vertical",
   "workbench.iconTheme": "symbols",
-  "workbench.colorTheme": "Dark Horizon",
+  "workbench.colorTheme": "OM Theme (No Italic)",
   "files.exclude": {
     "_build": true,
     ".nix-hex": true,

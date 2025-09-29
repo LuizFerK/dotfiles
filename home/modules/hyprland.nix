@@ -5,8 +5,6 @@
 }: {
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
-    source = ["~/.config/hypr/colors.conf"];
-
     env = [
       "XCURSOR_SIZE,24"
       "HYPRCURSOR_SIZE,24"
@@ -27,11 +25,11 @@
 
     general = {
       gaps_in = 4;
-      gaps_out = 5;
+      gaps_out = 6;
       border_size = 2;
 
-      # "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-      # "col.inactive_border" = "rgba(595959aa)";
+      "col.active_border" = "rgba(7f00ffee) rgba(595959aa) 45deg";
+      "col.inactive_border" = "rgba(595959aa)";
 
       # !!!!!!!!!!!!!!!
       allow_tearing = false;
