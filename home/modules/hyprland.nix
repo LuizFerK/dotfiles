@@ -19,8 +19,7 @@
     ];
 
     exec-once = [
-      "swww init"
-      "waybar"
+      "caelestia-shell"
       "vesktop"
     ];
 
@@ -46,7 +45,7 @@
     };
     
     decoration = {
-      rounding = 10;
+      rounding = 20;
 
       active_opacity = 1;
       inactive_opacity = 1;
@@ -94,7 +93,8 @@
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
       "SUPER, Return, exec, kitty"
       "SUPER, q, killactive"
-      "SUPER, D, exec, rofi -show drun"
+      # "SUPER, D, exec, rofi -show drun"
+      "SUPER, D, global, caelestia:launcher"
       "SUPER, SPACE, exec, hyprctl switchxkblayout sonix-usb-device next"
 
       # "SUPER, M, exit, "

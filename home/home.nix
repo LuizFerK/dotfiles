@@ -6,20 +6,14 @@
 
     ./modules/entries.nix
     ./modules/fish.nix
-    ./modules/forceblur.nix
     ./modules/git.nix
     ./modules/hyprland.nix
     ./modules/kitty.nix
-    ./modules/konsole.nix
-    ./modules/kvantum.nix
-    ./modules/rofi.nix
-    # ./modules/spicetify.nix
     ./modules/ssh.nix
     ./modules/vesktop.nix
     ./modules/vscode.nix
-    ./modules/wallpicker.nix
     ./modules/wallust.nix
-    ./modules/waybar.nix
+    ./modules/caelestia.nix
   ];
 
   home = {
