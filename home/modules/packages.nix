@@ -28,7 +28,7 @@
     neofetch
     insomnia
     jetbrains.datagrip
-    unstable.code-cursor
+    unstable.code-cursor-fhs
     nix-your-shell
     # latte-dock
 
