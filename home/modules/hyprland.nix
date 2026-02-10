@@ -11,9 +11,9 @@
     ];
 
     monitor = [
-      "HDMI-A-2, highres, -2560x0, 1"
-      "DP-1, highres, 0x0, 1"
-      "DP-2, highres, 2560x0, 1"
+      # "HDMI-A-2, highres, -2560x0, 1"
+      "DP-2, highres, 0x0, 1"
+      "DP-1, highres, 2560x0, 1"
     ];
 
     exec-once = [
@@ -102,7 +102,7 @@
       "SUPER, V, togglefloating, "
       # "SUPER, P, pseudo, # dwindle"
       # "SUPER, J, togglesplit, # dwindle"
-      "SUPER, Print, exec, grim -g \"$(slurp -d)\" - | wl-copy"
+      "SUPER_SHIFT, S, exec, grim -g \"$(slurp -d)\" - | wl-copy"
 
       # Sound control
       ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
@@ -153,6 +153,7 @@
       # "float,title:^(.*)(Extension:)(.*)(- Bitwarden)(.*)$"
       "opacity 0.85 0.85,class:^(Code)$"
       "opacity 0.85 0.85,class:^(Cursor)$"
+      "opacity 0.85 0.85,class:^(Antigravity)$"
       "opacity 0.85 0.85,class:^(firefox)$"
     ];
 

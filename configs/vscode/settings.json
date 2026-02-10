@@ -16,7 +16,6 @@
     ".nix-hex": true,
     ".nix-mix": true,
     ".tests_outputs": true,
-    ".elixir_ls": true,
     "deps": true,
     "node_modules": true,
     ".husky": true,
@@ -30,11 +29,11 @@
   },
   "[elixir]": {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "JakeBecker.elixir-ls"
+    "editor.defaultFormatter": "lexical-lsp.lexical"
   },
   "[phoenix-heex]": {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "JakeBecker.elixir-ls"
+    "editor.defaultFormatter": "lexical-lsp.lexical"
   },
   "emmet.includeLanguages": {
     "phoenix-heex": "html",
@@ -44,23 +43,11 @@
     "phoenix-heex": "html",
     "elixir": "html"
   },
-  "elixirLS.suggestSpecs": false,
   "css.lint.unknownAtRules": "ignore",
   "scss.lint.unknownAtRules": "ignore",
   "window.titleBarStyle": "native",
   "editor.minimap.enabled": true,
   "workbench.productIconTheme": "fluent-icons",
-  "git.openRepositoryInParentFolders": "always"
-  // "workbench.colorCustomizations": {
-  //   "editor.background": "#141c29",
-  //   "activityBar.background": "#141c29",
-  //   "statusBar.background": "#141c29",
-  //   "sideBar.background": "#141c29",
-  //   "tab.inactiveBackground": "#141c29",
-  //   "minimap.background": "#141c29",
-  //   "editorGroup.border": "#141c29",
-  //   "editorGroup.emptyBackground": "#141c29",
-  //   "editorGroupHeader.tabsBackground": "#141c29",
-  //   "editorPane.background": "#141c29"
-  // }
+  "git.openRepositoryInParentFolders": "always",
+  "lexical.server.releasePathOverride": "/home/luiz/.config/expert"
 }

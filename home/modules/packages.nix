@@ -31,6 +31,7 @@
     unstable.code-cursor-fhs
     nix-your-shell
     # latte-dock
+    unstable.antigravity
 
     # Hyprland
     kitty
@@ -39,7 +40,9 @@
     grim
     wl-clipboard
     slurp
-    rofi-wayland
+    rofi
+    obs-studio
+    steam-run
 
     bootiso
     woeusb
