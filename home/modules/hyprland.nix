@@ -18,6 +18,7 @@
 
     exec-once = [
       "caelestia-shell"
+      "caelestia shell idleInhibitor enable"
       "vesktop"
     ];
 

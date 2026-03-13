@@ -17,8 +17,7 @@
     };
 
     caelestia-shell = {
-      # url = "github:caelestia-dots/shell";
-      url = "github:caelestia-dots/shell/b334406";
+      url = "github:caelestia-dots/shell";
     };
   };
 
