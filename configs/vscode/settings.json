@@ -22,7 +22,11 @@
     ".yarn": true,
     "**/__pycache__": true,
     "instance": true,
-    ".pytest_cache": true
+    ".pytest_cache": true,
+    ".elixir_ls": true,
+    ".expert": true,
+    ".lexical": true,
+    "dist": true
   },
   "files.associations": {
     "*.heex": "phoenix-heex"
@@ -49,5 +53,7 @@
   "editor.minimap.enabled": true,
   "workbench.productIconTheme": "fluent-icons",
   "git.openRepositoryInParentFolders": "always",
-  "lexical.server.releasePathOverride": "/home/luiz/.config/expert"
+  "lexical.server.releasePathOverride": "/home/luiz/.config/expert",
+  "antigravity.marketplaceGalleryItemURL": "https://marketplace.visualstudio.com/items",
+  "antigravity.marketplaceExtensionGalleryServiceURL": "https://marketplace.visualstudio.com/_apis/public/gallery"
 }

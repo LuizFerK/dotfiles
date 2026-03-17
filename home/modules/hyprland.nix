@@ -154,7 +154,7 @@
       # "float,title:^(.*)(Extension:)(.*)(- Bitwarden)(.*)$"
       "opacity 0.85 0.85,class:^(Code)$"
       "opacity 0.85 0.85,class:^(Cursor)$"
-      "opacity 0.85 0.85,class:^(Antigravity)$"
+      "opacity 0.85 0.85,class:^(antigravity)$"
       "opacity 0.85 0.85,class:^(firefox)$"
     ];
 
