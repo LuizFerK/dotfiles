@@ -156,6 +156,7 @@
       "opacity 0.85 0.85,class:^(Cursor)$"
       "opacity 0.85 0.85,class:^(antigravity)$"
       "opacity 0.85 0.85,class:^(firefox)$"
+      "opacity 0.85 0.85,class:^(puffin)$"
     ];
 
     layerrule = [
