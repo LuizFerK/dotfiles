@@ -4,7 +4,6 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-    impermanence.url = "github:nix-community/impermanence";
 
     disko = {
       url = "github:nix-community/disko";
@@ -34,7 +33,6 @@
         ./nixos/configuration.nix
               
         inputs.home-manager.nixosModules.default
-        inputs.impermanence.nixosModules.impermanence
       ];
     };
   };
