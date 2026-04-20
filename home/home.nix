@@ -13,6 +13,7 @@
     ./modules/vesktop.nix
     ./modules/vscode.nix
     ./modules/caelestia.nix
+    ./modules/zed.nix
   ];
 
   home = {

@@ -22,6 +22,9 @@
     insomnia
     nix-your-shell
     unstable.antigravity
+    unstable.zed-editor
+    inputs.expert.packages.x86_64-linux.default
+    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     # Hyprland
     kitty

@@ -1,6 +1,6 @@
 {
   description = "awesome description woooo";
-     
+
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -18,6 +18,13 @@
     caelestia-shell = {
       url = "github:caelestia-dots/shell";
     };
+
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    expert.url = "github:elixir-lang/expert";
   };
 
   outputs = {self, nixpkgs, ...} @ inputs: let
@@ -31,7 +38,7 @@
         (import ./disko/disko.nix { device = "/dev/nvme0n1"; })
 
         ./nixos/configuration.nix
-              
+
         inputs.home-manager.nixosModules.default
       ];
     };

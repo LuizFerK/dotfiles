@@ -18,12 +18,15 @@
       gp = "git push";
       gpl = "git pull";
       gs = "git status";
-      
+
       # NixOS
       nd = "nix develop";
       ngc = "sudo nix-collect-garbage -d";
       nixos-switch = "sudo nixos-rebuild switch --flake ~/.dotfiles";
       flake-update = "sudo nix flake update --flake ~/.dotfiles";
+
+      # Dev
+      z = "zeditor .";
 
       # Granter
       ciasc-vpn = "sudo openfortivpn sslvpn01.ciasc.gov.br --username=granter_lklein@vpn.ciasc.gov.br";

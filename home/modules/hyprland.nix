@@ -29,7 +29,7 @@
       gaps_out = 6;
       border_size = 2;
 
-      "col.active_border" = "rgba(7f00ffee) rgba(595959aa) 45deg";
+      "col.active_border" = "rgba(03fcadee) rgba(595959aa) 45deg";
       "col.inactive_border" = "rgba(595959aa)";
 
       # !!!!!!!!!!!!!!!
