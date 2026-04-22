@@ -42,7 +42,7 @@
       focus_on_activate = true;
       new_window_takes_over_fullscreen = 2;
     };
-    
+
     decoration = {
       rounding = 20;
 
@@ -152,9 +152,6 @@
 
     windowrulev2 = [
       # "float,title:^(.*)(Extension:)(.*)(- Bitwarden)(.*)$"
-      "opacity 0.85 0.85,class:^(Code)$"
-      "opacity 0.85 0.85,class:^(Cursor)$"
-      "opacity 0.85 0.85,class:^(antigravity)$"
       "opacity 0.85 0.85,class:^(firefox)$"
       "opacity 0.85 0.85,class:^(puffin)$"
     ];

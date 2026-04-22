@@ -24,7 +24,6 @@
     unstable.antigravity
     unstable.zed-editor
     inputs.expert.packages.x86_64-linux.default
-    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     # Hyprland
     kitty
@@ -49,14 +48,4 @@
     # Networking
     openfortivpn
   ];
-
-  xdg.desktopEntries.puffin = {
-    name = "Puffin";
-    comment = "PostgreSQL GUI";
-    exec = "nix run /home/luiz/apps/puffin";
-    icon = "/home/luiz/apps/puffin/public/logo.png";
-    categories = [ "Development" "Utility" ];
-    terminal = false;
-    type = "Application";
-  };
 }

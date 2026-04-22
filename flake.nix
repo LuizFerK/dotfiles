@@ -19,10 +19,6 @@
       url = "github:caelestia-dots/shell";
     };
 
-    zen-browser = {
-      url = "github:youwen5/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
 
     expert.url = "github:elixir-lang/expert";
   };

@@ -121,8 +121,8 @@
   "project_panel": {
     "button": false,
     "default_width": 240,
-    "folder_icons": false,
-    // "hide_root": true,
+    "folder_icons": true,
+    "hide_root": true,
     "indent_size": 20,
     "auto_fold_dirs": false,
     "drag_and_drop": true,
@@ -208,6 +208,7 @@
     ".husky",
     ".yarn",
     "**/__pycache__",
+    ".git",
     "instance",
     ".pytest_cache",
     ".elixir_ls",
