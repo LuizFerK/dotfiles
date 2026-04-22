@@ -46,7 +46,7 @@
     "edit_debounce_ms": 700,
     "scroll_debounce_ms": 50,
     "toggle_on_modifiers_press": {
-      "control": true,
+      "control": false,
     },
     "show_value_hints": true,
   },
@@ -237,5 +237,15 @@
         "arguments": ["--stdio"],
       },
     },
+    "vue-language-server": {
+      "binary": {
+        "path": "vue-language-server",
+        "arguments": ["--stdio"],
+      },
+    },
+  },
+  "node": {
+    "path": "node",
+    "npm_path": "npm",
   },
 }
