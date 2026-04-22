@@ -1,51 +1,53 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   home.packages = with pkgs; [
-    ripgrep
+    # Desenvolvimento
     gcc
-    unzip
-    zip
-    btop
-    pavucontrol
     cmake
-
-    # Ui pq eu sou nerd n sei oq n sei oq la
-    google-chrome
-    firefox
     vim
+    unstable.zed-editor
+    unstable.antigravity
     docker-compose
-    dbeaver-bin
     nomad
     postgresql_16
-    neofetch
+    dbeaver-bin
     insomnia
-    nix-your-shell
-    unstable.antigravity
-    unstable.zed-editor
-    inputs.expert.packages.x86_64-linux.default
 
-    # Hyprland
+    # Terminal e Performance
     kitty
-    grim
-    wl-clipboard
-    slurp
-    obs-studio
-    steam-run
+    ripgrep
+    btop
+    neofetch
+    nix-your-shell
 
+    # Hyprland e Wayland
+    grim
+    slurp
+    wl-clipboard
+
+    # Navegadores e Redes
+    firefox
+    google-chrome
+    openfortivpn
+
+    # Multimídia
+    vlc
+    pavucontrol
+    obs-studio
+    spotify
+
+    # Comunicação
+    vesktop
+
+    # Utilitários de Sistema
+    zip
+    unzip
     bootiso
     woeusb
 
-    # IDUNOOOO
-    spotify
-    discord
-    vesktop
+    # Jogos
     steam
-
-    # Sound and video
-    vlc
-
-    # Networking
-    openfortivpn
+    steam-run
   ];
 }

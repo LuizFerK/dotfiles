@@ -1,7 +1,8 @@
 {
   device ? throw "Set this to your disk device, e.g. /dev/nvme0n1",
   ...
-}: {
+}:
+{
   disko.devices = {
     disk.main = {
       inherit device;
@@ -50,7 +51,7 @@
             size = "100%FREE";
             content = {
               type = "btrfs";
-              extraArgs = ["-f"];
+              extraArgs = [ "-f" ];
 
               subvolumes = {
                 "/root" = {
@@ -58,7 +59,10 @@
                 };
 
                 "/nix" = {
-                  mountOptions = ["subvol=nix" "noatime"];
+                  mountOptions = [
+                    "subvol=nix"
+                    "noatime"
+                  ];
                   mountpoint = "/nix";
                 };
               };

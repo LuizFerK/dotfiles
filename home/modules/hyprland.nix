@@ -1,8 +1,8 @@
 {
   pkgs,
-  config,
   ...
-}: {
+}:
+{
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
     env = [
@@ -167,7 +167,6 @@
       "blurpopups, caelestia-.*"
       "ignorealpha 0.85, caelestia-.*"
     ];
-
 
     bindm = [
       # Move/resize windows with mainMod + LMB/RMB and dragging

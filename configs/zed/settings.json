@@ -218,7 +218,7 @@
   ],
   "languages": {
     "Elixir": {
-      "language_servers": ["expert", "!elixir-ls"],
+      "language_servers": ["expert"],
     },
     "EEx": {
       "language_servers": ["expert"],

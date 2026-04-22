@@ -9,6 +9,7 @@
     ./modules/git.nix
     ./modules/hyprland.nix
     ./modules/kitty.nix
+    ./modules/lsp.nix
     ./modules/ssh.nix
     ./modules/vesktop.nix
     ./modules/caelestia.nix

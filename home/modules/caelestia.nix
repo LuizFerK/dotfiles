@@ -1,4 +1,4 @@
-{ inputs, pkgs, ...}:
+{ inputs, ... }:
 
 {
   imports = [
@@ -9,7 +9,7 @@
     systemd = {
       enable = false;
       target = "graphical-session.target";
-      environment = [];
+      environment = [ ];
     };
     settings = {
       appearance.transparency.enabled = true;
