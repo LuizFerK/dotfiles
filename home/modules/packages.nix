@@ -6,13 +6,15 @@
     gcc
     cmake
     vim
-    unstable.zed-editor
-    unstable.antigravity
     docker-compose
     nomad
     postgresql_16
     dbeaver-bin
     insomnia
+    unstable.zed-editor
+    unstable.antigravity
+    unstable.claude-code
+    unstable.claude-agent-acp
 
     # Terminal e Performance
     kitty

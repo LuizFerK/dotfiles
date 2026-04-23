@@ -18,6 +18,12 @@
   "agent": {
     "dock": "left",
   },
+  "agent_servers": {
+    "Claude Code": {
+      "type": "custom",
+      "command": "claude-agent-acp",
+    },
+  },
   "edit_predictions": {
     "mode": "subtle",
     "copilot": {
@@ -93,6 +99,7 @@
     "thumb": "always", // mostra "thumb" (indicador do scroll)
     "thumb_border": "left_open", // estilo da borda do thumb
     "current_line_highlight": null, // não destaca a linha atual no minimap
+    "display_in": "all_editors",
   },
   // Git
   "git": {
@@ -241,6 +248,11 @@
       "binary": {
         "path": "vue-language-server",
         "arguments": ["--stdio"],
+      },
+    },
+    "package-version-server": {
+      "initialization_options": {
+        "disabled": true,
       },
     },
   },

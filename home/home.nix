@@ -13,6 +13,7 @@
     ./modules/ssh.nix
     ./modules/vesktop.nix
     ./modules/caelestia.nix
+    ./modules/claude.nix
     ./modules/zed.nix
   ];
 
