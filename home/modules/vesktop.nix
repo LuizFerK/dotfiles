@@ -1,10 +1,41 @@
 {
-  home.file = {
-    ".config/vesktop/settings/settings.json" = {
-      source = ../../configs/vesktop/settings.json;
+  programs.vesktop = {
+    enable = true;
+
+    settings = {
+      autoUpdate = true;
+      autoUpdateNotification = true;
+      frameless = false;
+      winCtrlQ = false;
+      disableMinSize = false;
+      winNativeTitleBar = false;
     };
-    ".config/vesktop/themes/Translucence.theme.css" = {
-      source = ../../configs/vesktop/Translucence.theme.css;
+
+    vencord = {
+      themes.Midnight = builtins.readFile ../../configs/vesktop-theme.css;
+
+      settings = {
+        transparent = true;
+        useQuickCss = true;
+        themeLinks = [ ];
+        enabledThemes = [ "Midnight.css" ];
+        enableReactDevtools = false;
+        plugins = {
+          CommandsAPI.enabled = true;
+        };
+        notifications = {
+          timeout = 5000;
+          position = "bottom-right";
+          useNative = "not-focused";
+          logLimit = 50;
+        };
+        cloud = {
+          authenticated = false;
+          url = "https://api.vencord.dev/";
+          settingsSync = false;
+          settingsSyncVersion = 1718512206716;
+        };
+      };
     };
   };
 }

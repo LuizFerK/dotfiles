@@ -1,4 +1,10 @@
-{ config, lib, pkgs, inputs, outputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  outputs,
+  ...
+}:
 
 {
   imports = [
@@ -36,20 +42,27 @@
     isNormalUser = true;
     initialPassword = "1";
     shell = pkgs.fish;
-    extraGroups = [ "networkmanager" "wheel" "docker" "adbusers" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "docker"
+      "adbusers"
+    ];
   };
 
   programs.fish.enable = true;
   programs.adb.enable = true;
   virtualisation.docker.enable = true;
   security.sudo.wheelNeedsPassword = false;
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Home manager
   programs.fuse.userAllowOther = true;
   home-manager = {
-    extraSpecialArgs = {inherit inputs outputs;};
+    extraSpecialArgs = { inherit inputs outputs; };
     backupFileExtension = "backup";
     users = {
       luiz = import ../home/home.nix;
@@ -65,7 +78,7 @@
   services = {
     xserver = {
       enable = true;
-      videoDrivers = ["nvidia"];
+      videoDrivers = [ "nvidia" ];
       xkb = {
         layout = "us";
         variant = "intl";
@@ -106,20 +119,6 @@
       package = config.boot.kernelPackages.nvidiaPackages.beta;
     };
   };
-
-  # TODO: This should be moved to home manager
-  fonts.packages = with pkgs; [
-    jetbrains-mono
-    fira-code
-    fira-code-symbols
-    material-icons
-    material-design-icons
-    noto-fonts
-    font-awesome
-    terminus_font
-    fantasque-sans-mono
-    papirus-icon-theme
-  ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
   system.stateVersion = "23.11";
 }

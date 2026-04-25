@@ -1,19 +1,19 @@
-{ config, outputs, pkgs, ... }:
+{ outputs, ... }:
 
 {
   imports = [
     ./modules/packages.nix
 
-    ./modules/entries.nix
+    ./modules/files.nix
+    ./modules/fonts.nix
     ./modules/fish.nix
     ./modules/git.nix
     ./modules/hyprland.nix
     ./modules/kitty.nix
     ./modules/lsp.nix
-    ./modules/ssh.nix
+    ./modules/puffin.nix
     ./modules/vesktop.nix
     ./modules/caelestia.nix
-    ./modules/claude.nix
     ./modules/zed.nix
   ];
 

@@ -38,9 +38,6 @@
     obs-studio
     spotify
 
-    # Comunicação
-    vesktop
-
     # Utilitários de Sistema
     zip
     unzip

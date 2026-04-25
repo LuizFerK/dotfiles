@@ -32,7 +32,6 @@
       "col.active_border" = "rgba(03fcadee) rgba(595959aa) 45deg";
       "col.inactive_border" = "rgba(595959aa)";
 
-      # !!!!!!!!!!!!!!!
       allow_tearing = false;
 
       layout = "dwindle";
@@ -48,11 +47,6 @@
 
       active_opacity = 1;
       inactive_opacity = 1;
-
-      # drop_shadow = true;
-      # shadow_range = 4;
-      # shadow_render_power = 3;
-      # "col.shadow" = "rgba(1a1a1aee)";
 
       blur = {
         enabled = true;
@@ -89,20 +83,15 @@
     };
 
     bind = [
-      # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
       "SUPER, Return, exec, kitty"
       "SUPER, q, killactive"
-      # "SUPER, D, exec, rofi -show drun"
       "SUPER, D, global, caelestia:launcher"
       "SUPER, SPACE, exec, hyprctl switchxkblayout sonix-usb-device next"
 
-      # "SUPER, M, exit, "
       "SUPER, E, exec, dolphin"
       "SUPER, F, fullscreen, 1"
       "SUPER, T, togglegroup, "
       "SUPER, V, togglefloating, "
-      # "SUPER, P, pseudo, # dwindle"
-      # "SUPER, J, togglesplit, # dwindle"
       "SUPER_SHIFT, S, exec, grim -g \"$(slurp -d)\" - | wl-copy"
 
       # Sound control
@@ -122,7 +111,7 @@
       "SUPER_SHIFT,k,swapwindow,u"
       "SUPER_SHIFT,j,swapwindow,d"
 
-      # Switch workspaces with mainMod + [0-9]
+      # Switch workspaces
       "SUPER, 1, workspace, 1"
       "SUPER, 2, workspace, 2"
       "SUPER, 3, workspace, 3"
@@ -134,7 +123,7 @@
       "SUPER, 9, workspace, 9"
       "SUPER, 0, workspace, 10"
 
-      # Move active window to a workspace with mainMod + SHIFT + [0-9]
+      # Move active window to workspace
       "SUPER_SHIFT, 1, movetoworkspace, 1"
       "SUPER_SHIFT, 2, movetoworkspace, 2"
       "SUPER_SHIFT, 3, movetoworkspace, 3"
@@ -151,7 +140,6 @@
     ];
 
     windowrulev2 = [
-      # "float,title:^(.*)(Extension:)(.*)(- Bitwarden)(.*)$"
       "opacity 0.85 0.85,class:^(firefox)$"
       "opacity 0.85 0.85,class:^(puffin)$"
     ];
@@ -169,7 +157,6 @@
     ];
 
     bindm = [
-      # Move/resize windows with mainMod + LMB/RMB and dragging
       "SUPER, mouse:272, movewindow"
       "SUPER, mouse:273, resizewindow"
     ];

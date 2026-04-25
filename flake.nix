@@ -19,24 +19,26 @@
       url = "github:caelestia-dots/shell";
     };
 
-
     expert.url = "github:elixir-lang/expert";
   };
 
-  outputs = {self, nixpkgs, ...} @ inputs: let
-    inherit (self) outputs;
-  in {
-    overlays = import ./overlays {inherit inputs;};
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs outputs;};
-      modules = [
-        inputs.disko.nixosModules.default
-        (import ./disko/disko.nix { device = "/dev/nvme0n1"; })
+  outputs =
+    { self, nixpkgs, ... }@inputs:
+    let
+      inherit (self) outputs;
+    in
+    {
+      overlays = import ./nixos/overlays.nix { inherit inputs; };
+      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs outputs; };
+        modules = [
+          inputs.disko.nixosModules.default
+          (import ./nixos/disko.nix { device = "/dev/nvme0n1"; })
 
-        ./nixos/configuration.nix
+          ./nixos/configuration.nix
 
-        inputs.home-manager.nixosModules.default
-      ];
+          inputs.home-manager.nixosModules.default
+        ];
+      };
     };
-  };
 }
