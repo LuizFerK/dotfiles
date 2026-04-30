@@ -11,7 +11,6 @@
     postgresql_16
     dbeaver-bin
     insomnia
-    unstable.antigravity
     unstable.claude-code
     unstable.claude-agent-acp
 
