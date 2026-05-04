@@ -18,7 +18,7 @@
 
     exec-once = [
       "caelestia-shell"
-      "caelestia shell idleInhibitor enable"
+      "sh -c 'until out=$(caelestia shell idleInhibitor enable 2>&1) && [[ \"$out\" != *\"Target not found\"* ]]; do sleep 1; done'"
       "vesktop"
     ];
 

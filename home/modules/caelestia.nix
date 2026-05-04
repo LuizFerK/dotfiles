@@ -13,9 +13,16 @@
     };
     settings = {
       appearance.transparency.enabled = true;
-      bar.status.showBattery = false;
       services.useFahrenheit = false;
       notifs.actionOnClick = true;
+      general.idle = {
+        lockBeforeSleep = false;
+        timeouts = [ ];
+      };
+      bar.status = {
+        showBattery = false;
+        showWifi = false;
+      };
       paths = {
         wallpaperDir = "~/.dotfiles/assets/wallpapers";
         mediaGif = "root:/assets/bongocat.gif";
