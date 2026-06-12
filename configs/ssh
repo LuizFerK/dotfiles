@@ -76,8 +76,14 @@ Host flowtify_bastion
     LocalForward 5433 flowtify-demo.c3yty0cpxryt.sa-east-1.rds.amazonaws.com:5432
     LocalForward 5434 flowtify-prod.c3yty0cpxryt.sa-east-1.rds.amazonaws.com:5432
 
-Host rbov_poc
-    HostName 18.228.26.81
+Host rbov_prod
+    HostName 56.125.67.217
+    User luizferk
+    ServerAliveInterval 60
+    LocalForward 5466 localhost:5432
+
+Host rbov_dev
+    HostName 52.67.27.72
     User luizferk
     ServerAliveInterval 60
     LocalForward 5466 localhost:5432

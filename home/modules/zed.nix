@@ -209,6 +209,8 @@
         "_build"
         ".nix-hex"
         ".nix-mix"
+        ".hex"
+        ".mix"
         ".tests_outputs"
         "deps"
         "node_modules"
