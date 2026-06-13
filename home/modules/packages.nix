@@ -10,7 +10,7 @@
     nomad
     postgresql_16
     dbeaver-bin
-    insomnia
+    yaak
     unstable.claude-code
     unstable.claude-agent-acp
 
@@ -42,6 +42,7 @@
     unzip
     bootiso
     woeusb
+    (callPackage ../../pkgs/nixos-cleanup { })
 
     # Jogos
     steam
