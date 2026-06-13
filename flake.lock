@@ -70,6 +70,38 @@
         "type": "github"
       }
     },
+    "caveman": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1781272264,
+        "narHash": "sha256-FbmfhFaPs/SnSZdfNdErdIUHXt1FfBzErpPpLy8kdIc=",
+        "owner": "JuliusBrussee",
+        "repo": "caveman",
+        "rev": "25d22f864ad68cc447a4cb93aefde918aa4aec9f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "JuliusBrussee",
+        "repo": "caveman",
+        "type": "github"
+      }
+    },
+    "claude-plugins-official": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1781374039,
+        "narHash": "sha256-JNMckizfGrTOwjir5rzovhXbtYqtBT8l+jj8xuroy4M=",
+        "owner": "anthropics",
+        "repo": "claude-plugins-official",
+        "rev": "3d2f32464dfa0593330ab2120c88db54195414bf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "anthropics",
+        "repo": "claude-plugins-official",
+        "type": "github"
+      }
+    },
     "disko": {
       "inputs": {
         "nixpkgs": [
@@ -128,6 +160,22 @@
         "type": "github"
       }
     },
+    "headroom": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1781376381,
+        "narHash": "sha256-Yo6Y3CeC0BCqYx7LkeAwrPKJySpf/aiVx2IHZjiZRxU=",
+        "owner": "chopratejas",
+        "repo": "headroom",
+        "rev": "0c5c89d05cefabaa833e54decfdeb677edacc0d7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "chopratejas",
+        "repo": "headroom",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -146,6 +194,22 @@
         "owner": "nix-community",
         "ref": "release-26.05",
         "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "impeccable": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1781155155,
+        "narHash": "sha256-bjUkmSUGMwIRWjxNEmCoBDcViJl9mw+gPZ9xlIR/SfQ=",
+        "owner": "pbakaus",
+        "repo": "impeccable",
+        "rev": "92d6141cdf61f9943dfc8e2e46870e54e46d8641",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pbakaus",
+        "repo": "impeccable",
         "type": "github"
       }
     },
@@ -269,9 +333,13 @@
     "root": {
       "inputs": {
         "caelestia-shell": "caelestia-shell",
+        "caveman": "caveman",
+        "claude-plugins-official": "claude-plugins-official",
         "disko": "disko",
         "expert": "expert",
+        "headroom": "headroom",
         "home-manager": "home-manager",
+        "impeccable": "impeccable",
         "nixpkgs": "nixpkgs_3",
         "nixpkgs-unstable": "nixpkgs-unstable"
       }

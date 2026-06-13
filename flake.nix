@@ -20,6 +20,26 @@
     };
 
     expert.url = "github:elixir-lang/expert";
+
+    claude-plugins-official = {
+      url = "github:anthropics/claude-plugins-official";
+      flake = false;
+    };
+
+    caveman = {
+      url = "github:JuliusBrussee/caveman";
+      flake = false;
+    };
+
+    headroom = {
+      url = "github:chopratejas/headroom";
+      flake = false;
+    };
+
+    impeccable = {
+      url = "github:pbakaus/impeccable";
+      flake = false;
+    };
   };
 
   outputs =

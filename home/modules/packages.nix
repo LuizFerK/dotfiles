@@ -11,7 +11,6 @@
     postgresql_16
     dbeaver-bin
     yaak
-    unstable.claude-code
     unstable.claude-agent-acp
 
     # Terminal e Performance

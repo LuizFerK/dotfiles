@@ -15,6 +15,7 @@
     ./modules/vesktop.nix
     ./modules/caelestia.nix
     ./modules/zed.nix
+    ./modules/claude.nix
   ];
 
   home = {
