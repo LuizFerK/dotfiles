@@ -63,18 +63,26 @@ let
     exec "${inputs.caveman}/src/hooks/caveman-statusline.sh"
   '';
 
-  settings = pkgs.writeText "claude-settings.json" (builtins.toJSON {
-    permissions.allow = [];
-    enabledPlugins = {};
-    skipAutoPermissionPrompt = true;
-    statusLine = {
-      type = "command";
-      command = "caveman-statusline";
-    };
-  });
+  settings = pkgs.writeText "claude-settings.json" (
+    builtins.toJSON {
+      permissions.allow = [ ];
+      enabledPlugins = { };
+      skipAutoPermissionPrompt = true;
+      statusLine = {
+        type = "command";
+        command = "caveman-statusline";
+      };
+    }
+  );
 in
 {
-  home.packages = [ claude headroom caveman-statusline pkgs.nodejs pkgs.python3 ];
+  home.packages = [
+    claude
+    headroom
+    caveman-statusline
+    pkgs.nodejs
+    pkgs.python3
+  ];
 
   home.file.".claude/settings.json".source = settings;
 }

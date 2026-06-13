@@ -66,3 +66,15 @@ Do not run any query that creates, modifies, or deletes data. This covers INSERT
 - Use the pipeline operator (`|>`) wherever it improves readability. It should be the default way to express data transformations.
 - Prefer function clause matching over `case` or `if`. It is clearer and more idiomatic in most situations.
 - Prefer atom-keyed maps over string-keyed maps unless the data comes from an external source that requires strings.
+
+# Plugins
+
+The following documentation sites are pre-authorized for `WebFetch` in the dotfiles repo. Use them whenever you need to look up NixOS options, home-manager options, or nixpkgs packages — do not guess at option names or types:
+
+- `wiki.nixos.org` — NixOS wiki
+- `home-manager-options.extjs.eu` — full home-manager option reference
+- `nix-community.github.io` — community projects (nix-colors, impermanence, etc.)
+- `mynixos.com` — NixOS and home-manager option search
+- `github.com` / `raw.githubusercontent.com` — nixpkgs source and upstream module code
+
+Always fetch the relevant documentation before adding or modifying an option you are unsure about.

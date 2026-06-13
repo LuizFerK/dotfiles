@@ -19,7 +19,7 @@
     config.allowUnfree = true;
   };
 
-  # Grub
+  # Boot
   boot.loader = {
     efi.canTouchEfiVariables = true;
     grub = {
@@ -34,8 +34,10 @@
   time.timeZone = "America/Sao_Paulo";
 
   # Network
-  networking.hostName = "nixos";
-  networking.networkmanager.enable = true;
+  networking = {
+    hostName = "nixos";
+    networkmanager.enable = true;
+  };
 
   # Users
   users.users.luiz = {
@@ -49,16 +51,32 @@
     ];
   };
 
-  programs.fish.enable = true;
-  virtualisation.docker.enable = true;
-  security.sudo.wheelNeedsPassword = false;
+  # Security
+  security = {
+    sudo.wheelNeedsPassword = false;
+    rtkit.enable = true;
+  };
+
+  # Nix
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
   ];
 
+  # Virtualisation
+  virtualisation.docker.enable = true;
+
+  # Programs
+  programs = {
+    fish.enable = true;
+    fuse.userAllowOther = true;
+    hyprland = {
+      enable = true;
+      xwayland.enable = true;
+    };
+  };
+
   # Home manager
-  programs.fuse.userAllowOther = true;
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
     backupFileExtension = "backup";
@@ -67,13 +85,9 @@
     };
   };
 
-  # Hyprland
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
-
+  # Services
   services = {
+    # Display
     xserver = {
       enable = true;
       videoDrivers = [ "nvidia" ];
@@ -85,27 +99,26 @@
     };
     desktopManager.plasma6.enable = true;
     displayManager.sddm.enable = true;
+
+    # Bluetooth
+    blueman.enable = true;
+
+    # Audio
+    pulseaudio.enable = false;
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+    };
   };
 
-  # Audio
-  security.rtkit.enable = true;
-  services.pulseaudio.enable = false;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
-
-  # Bluetooth
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
-  };
-  services.blueman.enable = true;
-
-  # Hardware stuff
+  # Hardware
   hardware = {
+    bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+    };
     graphics = {
       enable = true;
       enable32Bit = true;

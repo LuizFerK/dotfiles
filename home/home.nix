@@ -16,6 +16,7 @@
     ./modules/caelestia.nix
     ./modules/zed.nix
     ./modules/claude.nix
+    ./modules/scripts.nix
   ];
 
   home = {
