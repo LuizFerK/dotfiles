@@ -40,7 +40,13 @@
 
     misc = {
       focus_on_activate = true;
-      new_window_takes_over_fullscreen = 2;
+      disable_hyprland_logo = true;
+      disable_splash_rendering = true;
+    };
+
+    ecosystem = {
+      no_update_news = true;
+      no_donation_nag = true;
     };
 
     decoration = {
@@ -140,21 +146,21 @@
       "SUPER, O, movetoworkspace, special"
     ];
 
-    windowrulev2 = [
-      "opacity 0.85 0.85,class:^(firefox)$"
-      "opacity 0.85 0.85,class:^(puffin)$"
+    windowrule = [
+      "opacity 0.85 0.85, match:class ^(firefox)$"
+      "opacity 0.85 0.85, match:class ^(puffin)$"
     ];
 
     layerrule = [
-      "noanim, caelestia-(launcher|osd|notifications|border-exclusion|area-picker)"
-      "animation fade, caelestia-(drawers|background)"
-      "order 1, caelestia-border-exclusion"
-      "order 2, caelestia-bar"
-      "xray 1, caelestia-(border|launcher|bar|sidebar|navbar|mediadisplay|screencorners)"
-      "blur, caelestia-.*"
-      "blur, qs-.*"
-      "blurpopups, caelestia-.*"
-      "ignorealpha 0.85, caelestia-.*"
+      "no_anim 1, match:namespace caelestia-(launcher|osd|notifications|border-exclusion|area-picker)"
+      "animation fade, match:namespace caelestia-(drawers|background)"
+      "order 1, match:namespace caelestia-border-exclusion"
+      "order 2, match:namespace caelestia-bar"
+      "xray 1, match:namespace caelestia-(border|launcher|bar|sidebar|navbar|mediadisplay|screencorners)"
+      "blur 1, match:namespace caelestia-.*"
+      "blur 1, match:namespace qs-.*"
+      "blur_popups 1, match:namespace caelestia-.*"
+      "ignore_alpha 0.85, match:namespace caelestia-.*"
     ];
 
     bindm = [
