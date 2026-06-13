@@ -23,7 +23,7 @@
       # NixOS
       nd = "nix develop";
       nixos-switch = "sudo nixos-rebuild switch --flake ~/.dotfiles";
-      flake-update = "sudo nix flake update --flake ~/.dotfiles";
+      nixos-update = "sudo nix flake update --flake ~/.dotfiles";
 
       # Dev
       z = "zeditor .";

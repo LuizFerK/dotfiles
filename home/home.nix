@@ -11,12 +11,12 @@
     ./modules/hyprland.nix
     ./modules/kitty.nix
     ./modules/lsp.nix
-    ./modules/puffin.nix
     ./modules/vesktop.nix
     ./modules/caelestia.nix
     ./modules/zed.nix
     ./modules/claude.nix
     ./modules/scripts.nix
+    ./modules/entries.nix
   ];
 
   home = {

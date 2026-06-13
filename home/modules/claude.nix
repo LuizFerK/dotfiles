@@ -68,6 +68,7 @@ let
       permissions.allow = [ ];
       enabledPlugins = { };
       skipAutoPermissionPrompt = true;
+      defaultPermissionMode = "auto";
       statusLine = {
         type = "command";
         command = "caveman-statusline";
