@@ -18,7 +18,7 @@
     kitty
     ripgrep
     btop
-    neofetch
+    fastfetch
     nix-your-shell
 
     # Hyprland e Wayland

@@ -46,12 +46,10 @@
       "networkmanager"
       "wheel"
       "docker"
-      "adbusers"
     ];
   };
 
   programs.fish.enable = true;
-  programs.adb.enable = true;
   virtualisation.docker.enable = true;
   security.sudo.wheelNeedsPassword = false;
   nix.settings.experimental-features = [
