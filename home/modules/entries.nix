@@ -18,7 +18,7 @@ _:
     headroom = {
       name = "Headroom";
       exec = "xdg-open http://127.0.0.1:8787/dashboard";
-      icon = "preferences-system-network";
+      icon = "/home/luiz/.dotfiles/assets/icons/claude.png";
       terminal = false;
       categories = [ "Network" ];
     };
@@ -26,7 +26,7 @@ _:
     nixpkgs = {
       name = "Nixpkgs";
       exec = "xdg-open https://search.nixos.org/packages";
-      icon = "system-search";
+      icon = "/home/luiz/.dotfiles/assets/icons/nix.png";
       terminal = false;
       categories = [ "Network" ];
     };
@@ -34,7 +34,7 @@ _:
     rbov-git = {
       name = "Rbov Git";
       exec = "xdg-open https://github.com/GranterOrg/radarbov-web/tree/dev";
-      icon = "github";
+      icon = "/home/luiz/.dotfiles/assets/icons/rbov.png";
       terminal = false;
       categories = [ "Development" ];
     };
@@ -42,7 +42,7 @@ _:
     rbov-pulls = {
       name = "Rbov Pulls";
       exec = "xdg-open https://github.com/GranterOrg/radarbov-web/pulls";
-      icon = "github";
+      icon = "/home/luiz/.dotfiles/assets/icons/rbov.png";
       terminal = false;
       categories = [ "Development" ];
     };
@@ -50,7 +50,7 @@ _:
     rbov-actions = {
       name = "Rbov Actions";
       exec = "xdg-open https://github.com/GranterOrg/radarbov-web/actions";
-      icon = "github";
+      icon = "/home/luiz/.dotfiles/assets/icons/rbov.png";
       terminal = false;
       categories = [ "Development" ];
     };
@@ -58,7 +58,7 @@ _:
     rbov-board = {
       name = "Rbov Board";
       exec = ''xdg-open "https://github.com/orgs/GranterOrg/projects/28/views/1?filterQuery=assignee%%3A%%40me"'';
-      icon = "github";
+      icon = "/home/luiz/.dotfiles/assets/icons/rbov.png";
       terminal = false;
       categories = [ "Development" ];
     };
@@ -66,7 +66,7 @@ _:
     youtube = {
       name = "YouTube";
       exec = "xdg-open https://www.youtube.com/";
-      icon = "youtube";
+      icon = "/home/luiz/.dotfiles/assets/icons/youtube.png";
       terminal = false;
       categories = [ "AudioVideo" ];
     };
