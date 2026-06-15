@@ -12,6 +12,7 @@
     dbeaver-bin
     yaak
     unstable.claude-agent-acp
+    gh
 
     # Terminal e Performance
     kitty
