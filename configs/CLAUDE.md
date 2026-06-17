@@ -66,6 +66,8 @@ Do not run any query that creates, modifies, or deletes data. This covers INSERT
 - Use the pipeline operator (`|>`) wherever it improves readability. It should be the default way to express data transformations.
 - Prefer function clause matching over `case` or `if`. It is clearer and more idiomatic in most situations.
 - Prefer atom-keyed maps over string-keyed maps unless the data comes from an external source that requires strings.
+- Use Ecto query functions (pipe-based) over the `from` macro DSL. Write `Schema |> where([s], s.field == ^val) |> Repo.all()` instead of `Repo.all(from s in Schema, where: s.field == ^val)`.
+- In `with` clauses, each `<-` binding must be a single-line function call. Extract pipe chains or multi-line expressions into named private functions before using them in `with`.
 
 # Plugins
 
