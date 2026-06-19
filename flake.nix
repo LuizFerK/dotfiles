@@ -26,16 +26,6 @@
       flake = false;
     };
 
-    caveman = {
-      url = "github:JuliusBrussee/caveman";
-      flake = false;
-    };
-
-    headroom = {
-      url = "github:chopratejas/headroom";
-      flake = false;
-    };
-
     impeccable = {
       url = "github:pbakaus/impeccable";
       flake = false;

@@ -15,14 +15,6 @@ _:
       type = "Application";
     };
 
-    headroom = {
-      name = "Headroom";
-      exec = "xdg-open http://127.0.0.1:8787/dashboard";
-      icon = "/home/luiz/.dotfiles/assets/icons/claude.png";
-      terminal = false;
-      categories = [ "Network" ];
-    };
-
     nixpkgs = {
       name = "Nixpkgs";
       exec = "xdg-open https://search.nixos.org/packages";
