@@ -150,6 +150,7 @@
       windowrule = [
         "opacity 0.85 0.85, match:class ^(firefox)$"
         "opacity 0.85 0.85, match:class ^(puffin)$"
+        "opacity 0.85 0.85, match:class ^(plateau)$"
         "opacity 0.85 0.85, match:class ^(yaak-app)$"
       ];
 
