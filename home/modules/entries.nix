@@ -15,6 +15,19 @@ _:
       type = "Application";
     };
 
+    plateau = {
+      name = "Plateau";
+      comment = "Review GUI";
+      exec = "nix run /home/luiz/apps/plateau";
+      icon = "/home/luiz/apps/plateau/public/logo.png";
+      categories = [
+        "Development"
+        "Utility"
+      ];
+      terminal = false;
+      type = "Application";
+    };
+
     nixpkgs = {
       name = "Nixpkgs";
       exec = "xdg-open https://search.nixos.org/packages";
