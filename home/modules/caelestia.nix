@@ -19,10 +19,15 @@
         lockBeforeSleep = false;
         timeouts = [ ];
       };
-      bar.status = {
-        showBattery = false;
-        showWifi = false;
-      };
+      bar.statusIcons = [
+        { id = "lockStatus"; enabled = true; }
+        { id = "audio"; enabled = false; }
+        { id = "microphone"; enabled = false; }
+        { id = "kbLayout"; enabled = false; }
+        { id = "network"; enabled = false; }
+        { id = "bluetooth"; enabled = true; }
+        { id = "battery"; enabled = false; }
+      ];
       paths = {
         wallpaperDir = "~/.dotfiles/assets/wallpapers";
         mediaGif = "root:/assets/bongocat.gif";
