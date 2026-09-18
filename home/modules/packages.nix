@@ -36,6 +36,7 @@
     pavucontrol
     obs-studio
     spotify
+    teamspeak6-client
 
     # Utilitários de Sistema
     zip
