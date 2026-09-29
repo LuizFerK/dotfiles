@@ -37,14 +37,15 @@ The default shell is Fish, the terminal is Kitty, and the primary editor is Zed.
 ## Git
 
 - Only commit when explicitly asked to. Never commit autonomously.
-- Never push to any remote.
-- Never open pull requests.
+- Only push to a remote when explicitly asked to (e.g., pushing a new branch to open a PR). Never push autonomously.
 - Follow the Conventional Commits specification for all commit messages (`feat:`, `fix:`, `chore:`, `refactor:`, `docs:`, etc.).
 - Never add AI as an author or co-author in any commit.
 
 ## Remote Commands
 
-Do not execute remote commands autonomously. This includes SSH, AWS CLI, GH CLI, and any other tool that reaches outside the local machine. When such a command is needed, generate it and present it for the user to run manually. Always explain what the command does before presenting it.
+Do not execute remote commands autonomously. This includes SSH, AWS CLI, and any other tool that reaches outside the local machine. When such a command is needed, generate it and present it for the user to run manually. Always explain what the command does before presenting it.
+
+Exception: GH CLI commands scoped to the user's own data (e.g., `gh pr list`, `gh issue view`, `gh pr status`, `gh repo view` on repos the user owns or has access to) may be run autonomously. Commands that affect other users or shared state (commenting, closing issues, merging PRs, etc.) still require explicit confirmation, per the Git rules above.
 
 ## Databases
 
