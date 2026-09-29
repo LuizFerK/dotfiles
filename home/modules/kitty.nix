@@ -11,7 +11,9 @@
     };
     themeFile = "cherry-midnight";
     settings = {
-      include = "~/.config/kitty/theme.conf";
+      # Rendered by caelestia's scheme apply (via ~/.config/caelestia/templates/kitty.conf)
+      # every time the shell scheme changes, so new kitty windows pick up the current colors.
+      include = "~/.local/state/caelestia/theme/kitty.conf";
       background_opacity = "0.5";
       enable_audio_bell = false;
       update_check_interval = 0;
