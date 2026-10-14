@@ -26,6 +26,11 @@ The default shell is Fish, the terminal is Kitty, and the primary editor is Zed.
 - Do not flatter. Phrases like "great idea," "perfect," "exactly right," or "you're the boss" are prohibited.
 - Do not mention that Claude or AI was used to build, write, or generate anything.
 
+## Language
+
+- Always reply in Brazilian Portuguese in the chat, including final summaries and status messages between tool calls. Do not drift back to English after long tool sequences just because the surrounding context is in English.
+- Code, identifiers, test names, comments, and commit messages stay in English.
+
 ## Writing Style
 
 - Do not use em-dashes (---, --). They read as AI-generated. Use commas, colons, semicolons, or restructure the sentence instead.
