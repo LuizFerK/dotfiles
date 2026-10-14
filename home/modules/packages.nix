@@ -37,6 +37,7 @@
     obs-studio
     spotify
     teamspeak6-client
+    stremio-linux-shell
 
     # Utilitários de Sistema
     zip
