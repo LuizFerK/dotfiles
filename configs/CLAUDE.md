@@ -44,6 +44,7 @@ The default shell is Fish, the terminal is Kitty, and the primary editor is Zed.
 - Only commit when explicitly asked to. Never commit autonomously.
 - Only push to a remote when explicitly asked to (e.g., pushing a new branch to open a PR). Never push autonomously.
 - Follow the Conventional Commits specification for all commit messages (`feat:`, `fix:`, `chore:`, `refactor:`, `docs:`, etc.).
+- Commit messages must be a single line containing only the subject. Never add a body or footer.
 - Never add AI as an author or co-author in any commit.
 
 ## Remote Commands
