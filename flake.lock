@@ -322,11 +322,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1792468498,
-        "narHash": "sha256-ztDKrdKaAuAWD7zzZXzEPiPaDQ10MMbjMl86e+u9Wmg=",
+        "lastModified": 1792474557,
+        "narHash": "sha256-H45QBuntvSjaRcyurXzvf8bHMwzc/OytWWM/rFcbCws=",
         "owner": "LuizFerK",
         "repo": "puffin",
-        "rev": "f1a9fdc876078a207383405992bc75efc9d17d94",
+        "rev": "673786d0abae047546c4ec6dedfaa4df7fba523a",
         "type": "github"
       },
       "original": {
