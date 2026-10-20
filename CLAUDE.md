@@ -4,7 +4,7 @@ This is a NixOS system configuration managed with Nix Flakes and home-manager. E
 
 ## Structure
 
-`flake.nix` is the entry point. It declares all external inputs (nixpkgs stable 26.05, nixpkgs-unstable, home-manager, disko, caelestia-shell, expert) and wires them into the NixOS output.
+`flake.nix` is the entry point. It declares all external inputs (nixpkgs stable 26.05, nixpkgs-unstable, home-manager, disko, caelestia-shell, expert, puffin) and wires them into the NixOS output.
 
 `nixos/` holds system-level configuration:
 

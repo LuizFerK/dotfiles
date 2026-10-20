@@ -15,6 +15,7 @@
     ./modules/caelestia.nix
     ./modules/zed.nix
     ./modules/claude.nix
+    ./modules/puffin.nix
     ./modules/scripts.nix
     ./modules/entries.nix
   ];

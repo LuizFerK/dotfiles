@@ -21,6 +21,9 @@
 
     expert.url = "github:elixir-lang/expert";
 
+    # No nixpkgs follows: Puffin builds against the nixpkgs pinned in its own lock
+    puffin.url = "github:LuizFerK/puffin";
+
     claude-plugins-official = {
       url = "github:anthropics/claude-plugins-official";
       flake = false;
