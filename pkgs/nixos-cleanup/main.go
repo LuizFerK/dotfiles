@@ -99,11 +99,31 @@ func dockerRunning() bool {
 	return exec.Command("docker", "info").Run() == nil
 }
 
+func trashDir() string {
+	if data := os.Getenv("XDG_DATA_HOME"); data != "" {
+		return data + "/Trash"
+	}
+	home, err := os.UserHomeDir()
+	if err != nil {
+		return ""
+	}
+	return home + "/.local/share/Trash"
+}
+
 func buildSteps() []step {
 	steps := []step{
+		// NOTE(LuizFerK): running as root only expires root/system generations; user and
+		// home-manager generations live under ~/.local/state/nix/profiles and need a user run.
+		{name: "nix user generations", args: []string{"nix-collect-garbage", "-d"}},
 		{name: "nix collect garbage", args: []string{"sudo", "nix-collect-garbage", "-d"}},
 		{name: "nix store optimise", args: []string{"sudo", "nix", "store", "optimise"}},
 		{name: "vacuum system logs", args: []string{"sudo", "journalctl", "--vacuum-time=14d"}},
+	}
+	if dir := trashDir(); dir != "" {
+		steps = append(steps, step{
+			name: "empty trash",
+			args: []string{"rm", "-rf", dir + "/files", dir + "/info", dir + "/expunged"},
+		})
 	}
 	if dockerRunning() {
 		steps = append(steps, step{
